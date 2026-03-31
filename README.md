@@ -1,32 +1,43 @@
 > [!IMPORTANT]
-> **Welcome to the Agent Builder Lab Preview!**
+> **Welcome to the AI For Dev Hackathon!**
 >
-> You are working with a **pre-release version** of the Agent Builder in Joule Studio. This gives you an early look at our upcoming capabilities. Please keep the following in mind:
->
-> *   **Features Are Subject to Change:** The user interface (UI), terminology, and functionalities you see in this lab may differ from the final, generally available (GA) product.
-> *   **For Educational Use Only:** This environment is designed for learning and experimentation, not for production use.
-> *   **Potential Instability:** As a preview version, you may encounter occasional instability or minor bugs. The exercises are designed to work with the current state of the platform. If you get stuck, please notify a session instructor.
+> *   **Features Are Subject to Change:** Since AI tools and platforms are evolving rapidly, some interfaces or features may vary slightly.
+> *   **For Educational Use Only:** This environment is designed exclusively for learning, experimentation, and this serious game. It is not intended for production use.
+> *   **Potential Instability:** When using “preview” versions of tools and connecting between multiple systems (MCP, Joule, CAP), you may experience occasional instability. The exercises are designed to work with the platform as it currently stands. If you get stuck, don't hesitate to ask an instructor for help!
 
 # Hackathon AI For Dev - SAP x Line
 
-Hands-on workshop built around the "Long Tail Vendor Management" use case for the LVMH TECH AI for Dev Hackathon. Participants will learn how to scaffold a SAP CAP/Fiori Elements application using SAP BAS Project Accelerator, iterate on it with Claude Code, and extend the solution with custom Joule Skills and Agents in Joule Studio.
+## Workshop Schedule (Format)
+This workshop is designed to be highly collaborative. To tackle the challenge of this Hackathon, you will be divided into two teams working in parallel, before merging your work:
 
-## Desccription
+* **Team 1:** AI for App Dev (Claude Code). Your mission will be to generate the complete business application (SAP CAP backend and Fiori frontend) by guiding an AI agent specialized in coding.
+* **Team 2:** AI for Agents (Joule Studio). Your mission will be to create and configure intelligent assistants capable of interacting in natural language to perform business actions.
+* **Convergence Activity:** The Docking. The two teams will come together in a final phase to connect the business application to the Joule assistant, thereby creating a unified and intelligent solution.
 
-Serious Game
-SAY 2 activity + accostage
+## The Use Case (Serious Game)
+Over time, the supplier database has expanded significantly and now includes a “long tail” of suppliers with little or no activity. This degrades data quality and increases operational risks (poor supplier selection, outdated data, more complex controls). Your goal is to build an innovative solution to identify, analyze, and clean this database using the latest generative AI capabilities.
 
-## Objectives
+📢 Final Presentation: At the end of the workshop, the unified group will present its final solution. Be sure to take notes as you go! Document your most effective prompts and workarounds, and take screenshots of your application and your interactions with Joule.
 
+## Learning Objectives
+* **Applied Prompt Engineering:** Learn how to formulate and structure effective prompts (using a CLAUDE.md context file and specifications) to guide the generation of complex code.
+* **Full-Stack SAP Generation:** Understand how AI can accelerate the creation of a CAP data model (CDS) and a user interface (Fiori Elements).
+* **Conversational Design:** Learn how to configure Skills and Agents in the SAP Joule Studio environment.
+* **Ecosystem Integration:** Discover how to link a standard CAP application with an enterprise virtual assistant within SAP BTP.
+
+## Operational Objectives
+* **Fiori App (via Claude Code):** Identify inactive suppliers, assign a risk/cleanliness score, add graphical indicators, and perform cleanup actions (block/close).
+* **Joule Skill:** Automate the blocking/unblocking of a supplier directly from a chat with Joule.
+* **Joule Agent:** Get contextual recommendations on a supplier’s status.
 
 ## Exercises
 
 - [Workshop Overview - Use Case Introduction](exercises/presentation/)
 - [Hands-on Tutorial 1 – Agent IA for coding](exercises/handson1_step0/)
-    - [Take charge of the use case and draft the functional specifications](exercises/ex0/)
-    - [Utiliser les ](exercises/ex0/)
+    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
+    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
 
-- [Hands-on Tutotial 2 – Joule Studio](exercises/ex0/)
+- [Hands-on Tutotial 2 – Joule Studio ](exercises/ex0/)
     - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
     - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
 
@@ -34,28 +45,27 @@ SAY 2 activity + accostage
     - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
     - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
 
-During this workshop, you can retrieve use full documentation on the different topics in the *documentation folder* such as:
-- [The functional specifications of the use case](exercises/ex0/)
-- [Prompt guide for Claude Code](exercises/ex0/)
-
+## Documentation & Useful Resources
+During this workshop, you’ll find valuable resources in the documentation folder to help you with your prompts:
+* [Functional Specifications for Use Cases (Templates & Examples)]()
+* [A Guide to Prompts for Maximizing Claude Code's Effectiveness]()
+* [Sample CLAUDE.md File for Initial Setup]()
+* [Code base for each sprint]()
 
 ## Requirements & Prerequisites - already in place
 
-Durant ce Hackathon, les environnements ont été mis en place en amont afin de maximiser l'expérience de l'atelier et explorer les approches et objectifs de cette session.
+During this hackathon, the environments were set up in advance to maximize the time allocated to creating and exploring AI solutions.
 
-Cepedant, si vous souhaitez refaire ce cas d'usage, les requirements sont ...
-
+However, if you wish to recreate this use case at home or at your company, here are the necessary prerequisites:
 1.  **Developpement environnement**:
-    - SAP Business Studio Application with the right plan
-    - Joule
-
+    - SAP Business Application Studio (BAS) with the appropriate plan.
+    - Active access to Joule.
 2.  **Actions & Destinations**:
-    - SAP BTP configuration
-    - SAP Build Action projects (`Sales Order (A2X) - v4`) are pre-built to access the SAP Cloud ERP System.
-    - BTP Destinations are available in SAP BAS.
-
+    - Active SAP BTP configuration.
+    - Pre-built SAP Build Action projects (e.g., Sales Order (A2X) - v4) to access the SAP Cloud ERP system.
+    - BTP Destinations correctly configured and accessible in SAP BAS.
 3.  **Joule Studio in SAP Build**:
-    - Agent Builder is enabled and accessible.
-
-3.  **Claude Code**:
-    - At minium Claude Pro account or an API key 
+    - The Agent Builder must be enabled and accessible on your tenant.
+3.  **Third-Party AI Tools (Claude Code)**:
+    - A local or cloud installation of Claude Code.
+    - At least one Claude Pro account or a valid, provisioned Anthropic API key 
