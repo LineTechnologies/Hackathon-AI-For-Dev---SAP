@@ -1,16 +1,20 @@
-# Hands-on Tutorial : 
+Expliquer le folder / srtructure
+
 TODO: faire comme le hands-on tuto de SAP avec des étapes et des fichiers différents pour chaque étape
 
 -> Description courte
 -> le fil rouge qui présente toutes les autres documentations aussi (exemple : prompt guide)
 
-Table de matière
+
+# Hands-on Tutorial - Create CAP application using AI Agentics
 
 Vous pouvez suivre ce hands-on pas à pas pour réaliser entièrement le cas d'usage guidé. 
 
 Nous vous recommandons de suivre les premières étapes, si nécessaires, pour mettre en place Claude Code, l'otpimiser et avec des tips sur son utilisation. Puis, de rédiger les spécifications, utiliser le project Accelerator et de réaliser les itérations par vous même pour prendre en main les outils et comprendre au mieux le use case.
 
-## Take charge of the use case and draft the functional specifications
+Table de matière
+
+## 1. Take charge of the use case and draft the functional specifications
 
 First, take the time to thoroughly familiarize yourself with the use case, the stated business requirements, and the various proposed sprints. To do so, feel free to refer to the context of the Serious Game and all related documents.
 
@@ -25,14 +29,14 @@ Our tips for effectively guiding the AI during the writing process:
 * Provide context: Directly provide the AI with the source documents (the requirements document, the sprint breakdown chart, as well as the templates and examples provided).
 * Iterate: Don’t hesitate to interact with the tool to refine the document until you have complete specifications ready to be converted into code.
 
-## Sprint 1 - Project Initialization
+## 2. Sprint 1 - Project Initialization
 
 Once you have created and drafted your functional specifications, we can begin developing the application. To do this, we will use and explore the Project Accelerator tool available in SAP Business Application Studio.
 
-### Principles of the Accelerator Project
+### 2.1 Principles of the Accelerator Project
 The Accelerator project is a tool integrated into BAS that allows you to generate a CAP or RAP application framework from a paper or Figma mockup, a description, or a business document in DOCX or MD format. This tool accelerates the creation and development of an application, but its sole purpose is to initiate the project. It cannot be used iteratively to generate code for adding features or fixing bugs. For that, we are exploring AI agents for “coding”.
 
-### Steps for using the Project Accelerator 
+### 2.2 Steps for using the Project Accelerator 
 | #    | Steps    | Captures |
 | :--: | :--- |  :-----   |
 | 0 | Open SAP Business Application Studio and create a devspace named “Full-Stack Application Using Productivity Tools,” which is a prerequisite for creating the CAP/ Fiori application. |  |
@@ -44,17 +48,17 @@ The Accelerator project is a tool integrated into BAS that allows you to generat
 | 6 | If everything went well, you should see the app! |  ![Command result](./images/PA_Step6.png)|
 
 
-## Set up Claude code
+## 3. Set up Claude code
 
 We now have an initialized, functional app that can be previewed. We will now use Claude Code to iterate on the project and code by adding, modifying, and reviewing it.
 
-### Claude Code Installation
+### 3.1 Claude Code Installation
 
 First, we’ll install Claude Code in our DevSpace. For instructions, please refer to the following document [Claude Code Setup Guide](exercises/..) or the official Anthropic documentation.
 
 **Note :** You can also use Cline as an AI agent for development, but this tool is not covered or used in this hands-on.
 
-### Add MCP server
+### 3.2 Add MCP server
 To optimized Claude Code and give it more specific knowledge, tools, etc. So we are going to add the UI5, Fiori and CAP MCP Server to Claude Code.
 
 *UI5 MCP server:*
@@ -96,7 +100,7 @@ https://www.npmjs.com/package/@cap-js/mcp-server
 $ claude mcp add cap-server -- npx -y @cap-js/mcp-server
 ```
 
-### Set up and customize Claude Code
+### 3.3 Set up and customize Claude Code
 
 After installing Claude Code and adding MCP servers to it to expand its knowledge of CAP, Fiori, and UI5, we will finalize its configuration before starting our code iterations.
 
@@ -142,7 +146,7 @@ Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest codin
 - When generating or modifying the SAP Fiori elements application on top of the CAP service use the Fiori MCP server if available.
 - When attempting to modify the SAP Fiori elements application like adding columns you must not use the screen personalization but instead modify the code of the project, before this first check whether an MCP server provides a suitable function.
 
-### Rules and Guidelines for CAP
+### 3.4 Rules and Guidelines for CAP
 
 - You MUST search for CDS definitions, like entities, fields and services (which include HTTP endpoints) with cds-mcp, only if it fails you MAY read \*.cds files in the project.
 - You MUST search for CAP docs with cds-mcp EVERY TIME you create, modify CDS models or when using APIs or the `cds` CLI from CAP. Do NOT propose, suggest or make any changes without first checking it.
@@ -158,7 +162,7 @@ Your AI agent is now fully configured and ready to use. You’ve just given it e
 Further Reading (Optional):
 If you're curious and want to deepen your understanding of Claude Code and its advanced customization capabilities, you can check out this supplementary document [...]. It includes additional tips as well as direct links to Anthropic's official documentation.
 
-## Premier Prompt Claude Code
+## 4. Premier Prompt Claude Code
 
 To get started, we recommend that you review the current codebase of your project generated by the Project Accelerator. It is crucial to ensure that the foundation is solid and that the initial requirements for our Sprint 1 are in place.
 
@@ -185,7 +189,7 @@ Exemple de prompt :
 Thank you for the audit. Can you plan and implement the changes to add the missing elements from Sprint 1?
 ```
 
-## Sprints & Iterations: Adding Features
+## 5. Sprints & Iterations: Adding Features
 
 
 
