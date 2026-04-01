@@ -17,7 +17,7 @@ This workshop is designed to be highly collaborative. To tackle the challenge of
 ## The Use Case (Serious Game)
 Over time, the supplier database has expanded significantly and now includes a “long tail” of suppliers with little or no activity. This degrades data quality and increases operational risks (poor supplier selection, outdated data, more complex controls). Your goal is to build an innovative solution to identify, analyze, and clean this database using the latest generative AI capabilities.
 
-📢 Final Presentation: At the end of the workshop, the unified group will present its final solution. Be sure to take notes as you go! Document your most effective prompts and workarounds, and take screenshots of your application and your interactions with Joule.
+Final Presentation: At the end of the workshop, the unified group will present its final solution. Be sure to take notes as you go! Document your most effective prompts and workarounds, and take screenshots of your application and your interactions with Joule.
 
 ## Learning Objectives
 * **Applied Prompt Engineering:** Learn how to formulate and structure effective prompts (using a CLAUDE.md context file and specifications) to guide the generation of complex code.
