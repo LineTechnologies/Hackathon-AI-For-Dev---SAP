@@ -21,8 +21,6 @@ By following this guide, you will be able to:
 
 > **Before diving into the full guide, here's everything you need to know to get started right now.**
 
----
-
 ### The #1 Mindset Shift
 
 Stop thinking *"how do I code this?"* → Start thinking *"how do I brief a senior engineer?"*
@@ -110,8 +108,6 @@ Create this file at the root of your project. Claude reads it automatically at e
 | `/compact` | Compress history, keep key context |
 | `@filename` | Feed a file directly into your prompt |
 | `!command` | Run a shell command from inside Claude Code |
-
----
 
 > **Ready to go deeper?** The sections below explain each of these points in detail, with full examples and templates you can copy directly into your projects.
 

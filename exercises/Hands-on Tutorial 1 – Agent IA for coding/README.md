@@ -152,8 +152,9 @@ Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest codin
 - You MUST search for CAP docs with cds-mcp EVERY TIME you create, modify CDS models or when using APIs or the `cds` CLI from CAP. Do NOT propose, suggest or make any changes without first checking it.
 ```
 
-**Tip: Keep the file concise!** <br>
-Don’t copy all your specifications directly into CLAUDE.md, as this file is constantly reloaded and could overload the agent’s memory (and consume too many tokens). Instead, use short instructions that link to other reference files.
+> [!TIP]
+> **Keep the file concise!**
+> Don’t copy all your specifications directly into CLAUDE.md, as this file is constantly reloaded and could overload the agent’s memory (and consume too many tokens). Instead, use short instructions that link to other reference files.
 
 To save you time and give you a concrete starting point, feel free to refer to this document [...]. It is a pre-filled CLAUDE.md file template that has been specially adapted for our use case!
 
