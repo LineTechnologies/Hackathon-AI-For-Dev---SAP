@@ -1,7 +1,7 @@
 # Prompts
 This document summarizes all the prompts and results from Sprint 1 using Claude Code. You can use this guide to create your own prompts based on your functional specifications.
 
---
+---
 
 **Prompt 1 : Audit our project**
 
@@ -25,7 +25,7 @@ The Project Accelerator did not take all the requirements in the specification i
 
 That’s okay, and it will happen often when you use this tool. That’s why we’ll work with Claude Code to identify the necessary changes and add features gradually.
 
---
+---
 
 **Prompt 2 : Plan & Edit the project**
 
@@ -52,7 +52,7 @@ Let's take a look at what the app preview looks like after these changes.
 
 You can see that several new columns have been added, in line with what we clearly defined in our specification for this first sprint.
 
---
+---
 
 **Prompt 3 : Adjust certain change**
 

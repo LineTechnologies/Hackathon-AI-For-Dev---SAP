@@ -1,13 +1,13 @@
 # Prompts
 This document summarizes all the prompts and results from Sprint 1 using Claude Code. You can use this guide to create your own prompts based on your functional specifications.
 
--- 
+---
 
 **Prompt 1 : Plan & Edit the project**
 
 We have an initial version of the app that currently displays a list of our salespeople, along with detailed information and display settings.
 
-We will now move on to the next sprint. As a reminder, in the serious game and hands-on exercise, you must define the sprints progressively to align with the incremental development of features. This way, Claude Code won’t get “lost” in the mountain of features and will stay focused on .
+We will now move on to the next sprint. As a reminder, in the serious game and hands-on exercise, you must define the sprints progressively to align with the incremental development of features. This way, Claude Code won’t get “lost” in the mountain of features and will stay focused on.
 
 Starting with this step and for the remaining sprints, we will systematically specify that we have moved on to the next sprint (here, Sprint 2) and that the previous sprints have been tested and validated (here, Sprint 1 only).
 You may want to add this line to the Claude.md file and specify it at the start of each session.
@@ -30,13 +30,15 @@ Requirements: Any changes made during this sprint must not, under any circumstan
 Objective: I want you to step-by-step plan the implementation of all Sprint 2 features. Please detail which files need to be modified (db/schema.cds, srv/service.js, app/.../annotations.cds, etc)  and how you intend to implement the logic before writing the actual code.
 ```
 
-Result of the first iteration: 
+**Result of the first iteration:** 
+
 ![Preview 1 - Sprint 2](images/prompts/sprint2_result_claudecode.png)
 
-Continue to iterate to display the KPI header :
+**Continue to iterate to display the KPI header :**
+
 ![Preview 1 - Sprint 2](images/prompts/sprint2_first_try.png)
 
---
+---
 
 **Prompt 2 : Resolve errors and shortcomings**
 
@@ -71,7 +73,7 @@ Objective: I want you to step-by-step plan the implementation to fix these 4 spe
 
 The risks and logic have indeed been modified. The sorting is also correct for inactivity. However, the header still doesn't appear. We're going to focus on adding this header; it's the critical and complex part for Claude Code.
 
---
+---
 
 **Prompt 3 : Solve the problem of KPIs**
 
@@ -97,7 +99,7 @@ Objective: I want you to fix this KPI header so that it appears in the report li
 Can you fix this bug, please?
 ```
 
---
+---
 
 **Prompt 4-N : Continue to iterate to display the KPI header**
 
