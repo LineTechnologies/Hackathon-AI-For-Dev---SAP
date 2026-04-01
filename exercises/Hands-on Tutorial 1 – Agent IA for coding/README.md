@@ -5,6 +5,7 @@ TODO: faire comme le hands-on tuto de SAP avec des étapes et des fichiers diff�
 -> Description courte
 -> le fil rouge qui présente toutes les autres documentations aussi (exemple : prompt guide)
 
+Surtout expliquer l'organisation du dossier (codebase par sprint, les documents prompts dans assets, etc)
 
 # Hands-on Tutorial - Create CAP application using AI Agentics
 
@@ -192,9 +193,29 @@ Thank you for the audit. Can you plan and implement the changes to add the missi
 
 ## 5. Sprints & Iterations: Adding Features
 
-
-
 // Mentionner les autres documents à utiliser ou ultra important pour les itérations Claude Code
 
 // Guide & tuto étape par étape en lien avec la réalisation de l'application
+
+### Sprint 1 : 
+
+First, the goal of the initial sprint is to refine your ideas regarding the definition of requirements by drafting an initial functional specification document.Next, after finalizing the specifications, you can use the Project Accelerator to set up the AI agent tools and run a test to refine your initial output using Claude Code.
+
+#### Steps
+1. Understanding the use case and requirements
+
+2. Write the functional specification for the first sprint
+
+> [!TIP]
+>You can use the provided specification template as a guide. 
+
+3. Create your DevSpace in BAS and get your project started using the Project Accelerator and your specifications
+
+4. Set up Claude Code
+
+5. Review and iterate using Claude Code to finalize this first sprint
+
+#### Tips & Advice
+
+
 

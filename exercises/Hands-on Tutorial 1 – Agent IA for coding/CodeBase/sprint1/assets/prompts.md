@@ -1,17 +1,23 @@
 # Prompts
+This document summarizes all the prompts and results from Sprint 1 using Claude Code. You can use this guide to create your own prompts based on your functional specifications.
 
-```txt
-> 
-```
+--
 
-Faire un audit de l'application après la génération de celle-ci via le Project Accelerator.
-> Plutôt en mode plan
+**Prompt 1 : Audit our project**
+
+Previously, we initiated our project using the Project Accelerator. However, it may overlook the addition of certain columns, data, or features. It is therefore essential to review the generated output before proceeding to the next sprint.
+
+To do this, we will use Claude Code to audit our project against our functional specifications. This step will save you significant time by identifying what hasn't been implemented yet and any elements that do not match your requirements.
+
+> Plan Mode
 ```txt
 > Expertise: You are an expert in CAP application development, Fiori UI5, and development best practices. 
 Context: The application was generated using Project Accelerator. Before adding new features, the plan is to audit the project to verify that all features from Sprint 1 were included during generation. To do this, you can refer to the specification document, which details and explains the expected features for this sprint.
 Objective: I want you to audit the CAP project and tell me which features and elements are missing from this first sprint.
 Can you complete this first task? Please
 ```
+
+![Audit Result](images/prompts/audit_result.png)
 
 Thanks to Claude Code, we can see that this first generation phase was not fully completed.
 
@@ -21,7 +27,9 @@ That’s okay, and it will happen often when you use this tool. That’s why we�
 
 --
 
-Plannifier la résolution des manquement de la génération en se basant l'audit, le projet en l'état et notre spécification.
+**Prompt 2 : Plan & Edit the project**
+
+Now, we will plan the resolution of the generation’s shortcomings based on the audit, the project as it is and our specification.
 > Mode Plan
 ```txt
 > The audit reveals that many features were not implemented when the application was initially developed. Before moving on to the next phase and the next sprint, it is essential to resolve this issue and implement the features from Sprint 1.
@@ -30,17 +38,23 @@ Objective: Based on your audit, the current code, and the requirements document,
 Can you do that? 
 ```
 
+![Claude Code Plan File](images/prompts/ClaudeCode_plan.png)
+
 We asked it to outline the steps for resolving the issue. Once the outline was complete, Claude Code generated a Markdown file containing all the steps and elements that needed to be modified. It asks if we want to review the document manually to adjust certain elements, but you can also simply accept the outline.
+
+![Audit Result](images/prompts/end_edition.png)
 
 Next, Claude Code will automatically switch to edit mode. It will use its outline to create a to-do list for managing the changes that need to be made.
 
 Let's take a look at what the app preview looks like after these changes.
 
-//image
+![Preview 1 - Sprint 1](images/prompts/preview_sprint1.png)
 
 You can see that several new columns have been added, in line with what we clearly defined in our specification for this first sprint.
 
 --
+
+**Prompt 3 : Adjust certain change**
 
 After checking, we found that our app is missing three minor elements, so we’ll iterate again to fix that.
 
@@ -67,5 +81,8 @@ Provide a pre-configured Selection Variant named "Fournisseurs inactifs" (Inacti
 Please update the necessary `.cds` (annotations/schema), `.js` (service handlers), and `manifest.json` files to make this work locally. Ensure all annotations comply with standard SAP Fiori Elements OData V4 guidelines.
 ```
 
+![Preview 2 - Sprint 1](images/prompts/preview2_sprint1.png)
+
 All right, we can clearly see that the final touches have been made. Sprint 1 is now complete.
 
+> Go to the next step: Sprint 2
