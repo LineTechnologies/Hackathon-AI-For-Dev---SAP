@@ -131,8 +131,10 @@ $ npm i -g @cap-js/mcp-server
 # Add to claude
 $ claude mcp add cds-mcp -- npx -y @cap-js/mcp-server
 ```
+https://www.npmjs.com/package/@cap-js/mcp-server
 
 #### Add the MCP server for SAP Fiori:
+https://www.npmjs.com/package/@sap-ux/fiori-mcp-server
 ```bash
 # Global installation of the npm package
 $ npm i -g @sap-ux/fiori-mcp-server
@@ -141,7 +143,12 @@ $ claude mcp add fiori-server -- npx -y @sap-ux/fiori-mcp-server
 ```
 
 #### Add the MCP server for SAP UI5:
+https://www.npmjs.com/package/@ui5/mcp-server
 
+```bash
+# Setup
+$ claude mcp add ui5-server -- npx -y @ui5/mcp-server
+```
 
 You can now test whether Claude Code has access to the CAP, Fiori, UI5 and others MCP server by using the following command:
 ```bash
