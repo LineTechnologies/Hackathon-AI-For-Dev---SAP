@@ -11,7 +11,7 @@ For the hackathon workshop, we have already set up the development environments.
 - Install Claude Code & the associated extension
 - Set up the MCP servers
 
-> [!IMPORTANT>]
+> [!IMPORTANT]
 > This guide will be useful for you to know how to initiate the CLAUDE.md file via the /init command and how to modify this same file by adding the rules associated with the MCP servers.
 
 > [!NOTE]

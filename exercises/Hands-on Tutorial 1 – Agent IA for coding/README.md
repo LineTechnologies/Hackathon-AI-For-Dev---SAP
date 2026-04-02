@@ -241,7 +241,7 @@ First, the goal of the initial sprint is to refine your ideas regarding the defi
 > [!TIP]
 > - You can use the provided specification template as a guide.
 > - You also have access to specification examples if you want to compare, refactor, add features or remove them.
-> - didn’t take much time to write the specifications, there is little time in comparison with the number of possible features. The goal is to understand and learn how to use this tool to meet business needs.
+> - Didn’t take much time to write the specifications, there is little time in comparison with the number of possible features. The goal is to understand and learn how to use this tool to meet business needs.
 
 
 ### Sprint 2:
@@ -268,6 +268,8 @@ Finally, sprint 4 is the last big step of adding functionality. Its objective is
 Expliquer le folder / srtructure
 
 TODO: faire comme le hands-on tuto de SAP avec des étapes et des fichiers différents pour chaque étape
+
+Mettre un exemple de visuel d'application de fin
 
 -> Description courte
 -> le fil rouge qui présente toutes les autres documentations aussi (exemple : prompt guide)
