@@ -217,11 +217,11 @@ In this section of the hands-on, you will iterate via Claude Code to improve the
 
 If you encounter problems or are unable to add certain complex features, you can always refer to the code base of each sprint. We have carried out the exercise beforehand to allow you to visualize or track our experiments, errors, and successes with these tools.
 
-### Conseil & Tips
+### Advice & Tips
 
 > [!TIP]
-> - Concentrez vous sur la mise en place de la logique métier et de l'interface utilisateur. Utilisez des mock data représentants exactement les besoin métier de l'application. Vous pourrez ensuite migrer vers un backend S/4HANA par exemple.
-> - N'hésité pas à utiliser des outils de GenAI comme Gemini, Claude, ChatGPT pour rentrer dans des détails technique avec Claude Code, ou encore pour détailler et améliorer votre spécification ou pour trouver de nouvelles idées à intégrer. 
+> - Focus on setting up the business logic and user interface. Use mock data representatives exactly the business needs of the application. You can then migrate to an S/4HANA backend for example.
+> - Do not hesitate to use GenAI tools such as Gemini, Claude, ChatGPT to get into technical details with Claude Code, or to detail and improve your specification or to find new ideas to integrate.
 
 ### Sprint 1: 
 
