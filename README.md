@@ -32,21 +32,23 @@ Final Presentation: At the end of the workshop, the unified group will present i
 
 ## Exercises
 
-- [Workshop Overview - Use Case Introduction](exercises/presentation/)
+- [Workshop Overview - Use Case Introduction](exercises)
 - [Hands-on Tutorial 1 – Agent IA for coding](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/)
-    - [Step by Step Explanation](exercises/Hands-on Tutorial 1 – Agent IA for coding/README.md)
-    - [Sprint 1 - Application Initialization](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint1)
-    - [Sprint 2 - Insights and KPIs](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint2)
-    - [Sprint 3 - Navigation & Object Page](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint3)
-    - [Sprint 4 - Business Action](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint4)
+    - [Step by Step Explanation](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/README.md)
+    - [Sprint 1 - Application Initialization](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/CodeBase/sprint1)
+    - [Sprint 2 - Insights and KPIs](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/CodeBase/sprint2)
+    - [Sprint 3 - Navigation & Object Page](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/CodeBase/sprint3)
+    - [Sprint 4 - Business Action](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/CodeBase/sprint4)
 
-- [Hands-on Tutotial 2 – Joule Studio ](exercises/ex0/)
-    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
-    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
+- [Hands-on Tutotial 2 – Joule Studio ](exercises/Hands-on%20Tutorial%202%20–%Joule%20Studio/)
+    - [Hands-on Tutorial 2](exercises/ex0/)
+    - [Hands-on Tutorial 2](exercises/ex0/)
 
-- [Hands-on Tutotial 3 – Joule Studio & CAP App](exercises/ex0/)
-    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
-    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
+- [Hands-on Tutotial 3 – Joule Studio & CAP App](exercises/Hands-on%20Tutorial%203%20–%Joule%20Studio%20&%20CAP%20App/)
+    - Connecting CAP Application to S/4HANA backend system
+    - Integrate Joule un CAP Application
+    - Tests to trigger your created agent using natural langague
+    - Create new buton that write a report based on news (using your agent)
 
 ## Documentation & Useful Resources
 During this workshop, you’ll find valuable resources in the documentation folder to help you with your prompts:
