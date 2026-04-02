@@ -2,13 +2,14 @@
 
 This document traces the entire realization of sprint 2 and contains all the prompts used, results, and tips for this section. You can use this guide to create your own prompts based on your functional specifications.
 
+> [!NOTE]
+> As a reminder, in the serious game and hands-on exercise, you must define the sprints progressively to align with the incremental development of features (in the functionnal specifications). This way, Claude Code won’t get “lost” in the mountain of features and will stay focused on.
+
 ---
 
 **Prompt 1 : Plan & Edit the project**
 
-We have an initial version of the app that currently displays a list of our salespeople, along with detailed information and display settings.
-
-We will now move on to the next sprint. As a reminder, in the serious game and hands-on exercise, you must define the sprints progressively to align with the incremental development of features. This way, Claude Code won’t get “lost” in the mountain of features and will stay focused on.
+We have an initial version of the app that currently displays a list of our salespeople, along with detailed information and display settings. We will now move on to the next sprint.
 
 Starting with this step and for the remaining sprints, we will systematically specify that we have moved on to the next sprint (here, Sprint 2) and that the previous sprints have been tested and validated (here, Sprint 1 only).
 You may want to add this line to the Claude.md file and specify it at the start of each session.

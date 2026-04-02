@@ -33,9 +33,12 @@ Final Presentation: At the end of the workshop, the unified group will present i
 ## Exercises
 
 - [Workshop Overview - Use Case Introduction](exercises/presentation/)
-- [Hands-on Tutorial 1 – Agent IA for coding](exercises/handson1_step0/)
-    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
-    - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)
+- [Hands-on Tutorial 1 – Agent IA for coding](exercises/Hands-on Tutorial 1 – Agent IA for coding/)
+    - [Step by Step Explanation](exercises/Hands-on Tutorial 1 – Agent IA for coding/README.md)
+    - [Sprint 1 - Application Initialization](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint1)
+    - [Sprint 2 - Insights and KPIs](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint2)
+    - [Sprint 3 - Navigation & Object Page](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint3)
+    - [Sprint 4 - Business Action](exercises/Hands-on Tutorial 1 – Agent IA for coding/CodeBase/sprint4)
 
 - [Hands-on Tutotial 2 – Joule Studio ](exercises/ex0/)
     - [Hands-on Tutorial 1 – Agent IA for coding](exercises/ex0/)

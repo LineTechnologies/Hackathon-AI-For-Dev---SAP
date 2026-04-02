@@ -194,8 +194,16 @@ Thank you for the audit. Can you plan and implement the changes to add the missi
 ## 5. Sprints & Iterations: Adding Features
 
 // Mentionner les autres documents à utiliser ou ultra important pour les itérations Claude Code
+1. CLAUDE.md Template: vous pouvez vous baser sur ce fichier pour structurer le votre  
+2. Claude Code Guide : guide d'installation, de mise en place et de première utilisation de Claude Code (non exhaustif) 
+3. Prompting Guide : guide sur comment prompter pour améliorer les performances et les rendus de Claude Code 
 
 // Guide & tuto étape par étape en lien avec la réalisation de l'application
+
+Conseil & Tips
+
+1. Concentrez vous sur la mise en place de la logique métier et de l'interface utilisateur. Utilisez des mock data représentants exactement les besoin métier de l'application. Vous pourrez ensuite migrer vers un backend S/4HANA par exemple.
+2. 
 
 ### Sprint 1 : 
 
@@ -204,7 +212,7 @@ First, the goal of the initial sprint is to refine your ideas regarding the defi
 #### Steps
 1. Understanding the use case and requirements
 
-2. Write the functional specification for the first sprint
+2. Write the functional specification for the first sprint, you can 
 
 > [!TIP]
 >You can use the provided specification template as a guide. 

@@ -1,9 +1,12 @@
 # Use case : "Long Tail" Vendor Management
 
-## Serious Game
-TODO
 
-## Use case
-![use case](images/usecase.png)
+## Team A
 
-![alt text](images/sprints.png)
+### Serious Game
+
+
+### Sprint
+
+
+## Team B

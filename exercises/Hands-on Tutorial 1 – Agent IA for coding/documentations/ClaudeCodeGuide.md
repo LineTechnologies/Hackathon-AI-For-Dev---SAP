@@ -4,7 +4,23 @@ Welcome to the Claude Code Reference Guide. This document is designed to guide y
 
 You can also refer to Anthropic's official documentation on Claude Code: : [Claude Code official documentation](https://code.claude.com/docs/en/quickstart)
 
-Pendant Hackthon
+## During the workshop - Hackathon
+
+For the hackathon workshop, we have already set up the development environments. So you don’t have to:
+- Create a DevSpace Full-Stack Application in SAP BAS
+- Install Claude Code & the associated extension
+- Set up the MCP servers
+
+> [!IMPORTANT>]
+> This guide will be useful for you to know how to initiate the CLAUDE.md file via the /init command and how to modify this same file by adding the rules associated with the MCP servers.
+
+> [!NOTE]
+> There is also some interesting information on the functioning of Claude Code, tips and usage advice (eg plan mode).
+
+## Outside of a Hackathon
+
+> [!IMPORTANT]
+> If you redo the scenario or if you discover this use case and you are looking to learn the AI Agent for coding approach and use these tools. You can follow the entirety of this guide.
 
 ## 1. Installation & Authentication (Setup)
 
@@ -243,6 +259,16 @@ Claude Code reads your project files to understand the context. If it reads too 
 * **Provide specific context:** Be as detailed as possible. Clear instructions (using your specification file) allow Claude Code to plan its actions correctly.
 
 * **Review before accepting:** In “Ask before” mode, always inspect the proposed changes (the diff) before saying “Yes.” If something seems illogical, reject the change and adjust your prompt.
+
+> [!TIP]
+> Final Tip
+> There are numerous ways to prompt, iterate, formulate our requests, etc. Many parameters vary and GenAI models are stochastic. It is therefore normal not to have exactly what one wants on the first try.
+> The idea is to know how to adapt: 
+>   - Sprint with completely new features > request to plan and add the features.
+>   - Functionality or very complex element > on the gap of the sprint and iterate independently
+>   - Sprint with improvements of an Object Page, a List Report, or other elements already existing in the application as-is > Test a schedule or ask to do a detailed step-by-step (gap), then iterate >on each substep.
+>
+> There are many different scenarios and cases. And, there is never a single way to add the features. Trying and practicing is the best way to learn. 
 
 ## 5. Resource Directory
 This section brings together all the documentation to help you expand Claude Code's capabilities and master the art of prompt engineering.
