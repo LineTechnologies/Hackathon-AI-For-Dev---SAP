@@ -1,19 +1,30 @@
-Expliquer le folder / srtructure
-
-TODO: faire comme le hands-on tuto de SAP avec des étapes et des fichiers différents pour chaque étape
-
--> Description courte
--> le fil rouge qui présente toutes les autres documentations aussi (exemple : prompt guide)
-
-Surtout expliquer l'organisation du dossier (codebase par sprint, les documents prompts dans assets, etc)
-
 # Hands-on Tutorial - Create CAP application using AI Agentics
 
-Vous pouvez suivre ce hands-on pas à pas pour réaliser entièrement le cas d'usage guidé. 
+## Introduction & Short Description
+Welcome to this Hands-on Tutorial! In this exercise, you will learn how to leverage GenAI agents—specifically **Claude Code**—to bootstrap, develop, and iterate on an SAP CAP (Node.js) and Fiori Elements (UI5) application. You will follow a guided use case, transitioning from functional business specifications to a fully working prototype across 4 progressive sprints.
 
-Nous vous recommandons de suivre les premières étapes, si nécessaires, pour mettre en place Claude Code, l'otpimiser et avec des tips sur son utilisation. Puis, de rédiger les spécifications, utiliser le project Accelerator et de réaliser les itérations par vous même pour prendre en main les outils et comprendre au mieux le use case.
+You can follow this step-by-step hands-on to fully realize the guided use case. We recommend that you follow the first steps, if necessary, to set up Claude Code, optimize it and discover tips on its use. Then, to write the specifications, use the Project Accelerator and perform the iterations by yourself to take control of the tools and assimilate this new development method.
 
-Table de matière
+## Repository Structure & The "Red Thread"
+To help you navigate this tutorial successfully, we have structured this folder as a comprehensive toolkit. The AI-assisted development lifecycle relies heavily on good inputs and context. Here is how the folders guide you through the process:
+
+* **`specifications/` (Your Compass):** AI agents need clear, structured instructions to generate accurate code. In this folder, you will find `templates/` to draft your own business requirements, as well as `examples/` of ready-to-use specifications. These documents are the primary inputs for your AI agent.
+* **`documentations/` (Your AI Guides):** This is the **"red thread"** of your learning journey. It contains all the necessary resources to master the AI tools:
+    * `ClaudeCodeGuide.md`: Instructions for installing and setting up the agent.
+    * `PromptingGuide.md`: Best practices, tips, and strategies to interact effectively with the AI and get the best results.
+    * `CLAUDE_TEMPLATE.md`: A highly optimized configuration file template to initialize your agent's technical knowledge.
+* **`CodeBase/` (Your Safety Net):** Divided into `sprint1` through `sprint4`, this folder contains the reference code and assets resulting from each successful sprint. If your AI gets stuck or you encounter blocking errors, you can always peek into these folders or copy their contents to catch up and proceed to the next stage.
+
+---
+
+## Table of Contents
+1. [Take charge of the use case and draft the functional specifications](#1-take-charge-of-the-use-case-and-draft-the-functional-specifications)
+2. [Sprint 1 - Project Initialization](#2-sprint-1---project-initialization)
+3. [Set up Claude code](#3-set-up-claude-code)
+4. [First Prompt Claude Code](#4-first-prompt-claude-code)
+5. [Sprints & Iterations: Adding Features](#5-sprints--iterations-adding-features)
+
+--- 
 
 ## 1. Take charge of the use case and draft the functional specifications
 
@@ -52,6 +63,11 @@ The Accelerator project is a tool integrated into BAS that allows you to generat
 ## 3. Set up Claude code
 
 We now have an initialized, functional app that can be previewed. We will now use Claude Code to iterate on the project and code by adding, modifying, and reviewing it.
+
+**Dire qu'il faut skip cette étape pendant le hackathon car déjà mis en place !!**
+Sauf partie 3.3 sur l'optimisation (juste MCP, l'authentification + install)
+
+=> faire init, optimisation CLAUDE.md (Rules, etc)
 
 ### 3.1 Claude Code Installation
 
@@ -157,14 +173,18 @@ Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest codin
 > **Keep the file concise!**
 > Don’t copy all your specifications directly into CLAUDE.md, as this file is constantly reloaded and could overload the agent’s memory (and consume too many tokens). Instead, use short instructions that link to other reference files.
 
-To save you time and give you a concrete starting point, feel free to refer to this document [...]. It is a pre-filled CLAUDE.md file template that has been specially adapted for our use case!
+To save you time and give you a concrete starting point, feel free to refer to this document [CLAUDE.md Template](documentations/CLAUDE_TEMPLATE.md). It is a pre-filled CLAUDE.md file template that has been specially adapted for our use case!
 
 Your AI agent is now fully configured and ready to use. You’ve just given it everything it needs to understand your project. We can now move on to code iteration.
 
-Further Reading (Optional):
-If you're curious and want to deepen your understanding of Claude Code and its advanced customization capabilities, you can check out this supplementary document [...]. It includes additional tips as well as direct links to Anthropic's official documentation.
+> [!NOTE]
+> Further Reading (Optional):
+> If you're curious and want to deepen your understanding of Claude Code and its advanced customization capabilities, you can check out this supplementary document: 
+> - [Claude Code Guide](documentations/ClaudeCodeGuide.md): guide d'installation, de mise en place et de première utilisation de Claude Code (non exhaustif) 
+> - [Prompting Guide](documentations/PromptingGuide.md): guide sur comment prompter pour améliorer les performances et les rendus de Claude Code 
+> It includes additional tips as well as direct links to Anthropic's official documentation.
 
-## 4. Premier Prompt Claude Code
+## 4. First Prompt Claude Code
 
 To get started, we recommend that you review the current codebase of your project generated by the Project Accelerator. It is crucial to ensure that the foundation is solid and that the initial requirements for our Sprint 1 are in place.
 
@@ -193,37 +213,63 @@ Thank you for the audit. Can you plan and implement the changes to add the missi
 
 ## 5. Sprints & Iterations: Adding Features
 
-// Mentionner les autres documents à utiliser ou ultra important pour les itérations Claude Code
-1. CLAUDE.md Template: vous pouvez vous baser sur ce fichier pour structurer le votre  
-2. Claude Code Guide : guide d'installation, de mise en place et de première utilisation de Claude Code (non exhaustif) 
-3. Prompting Guide : guide sur comment prompter pour améliorer les performances et les rendus de Claude Code 
+In this section of the hands-on, you will iterate via Claude Code to improve the application and meet the needs of functional stakeholders.
 
-// Guide & tuto étape par étape en lien avec la réalisation de l'application
+If you encounter problems or are unable to add certain complex features, you can always refer to the code base of each sprint. We have carried out the exercise beforehand to allow you to visualize or track our experiments, errors, and successes with these tools.
 
-Conseil & Tips
+### Conseil & Tips
 
-1. Concentrez vous sur la mise en place de la logique métier et de l'interface utilisateur. Utilisez des mock data représentants exactement les besoin métier de l'application. Vous pourrez ensuite migrer vers un backend S/4HANA par exemple.
-2. 
+> [!TIP]
+> - Concentrez vous sur la mise en place de la logique métier et de l'interface utilisateur. Utilisez des mock data représentants exactement les besoin métier de l'application. Vous pourrez ensuite migrer vers un backend S/4HANA par exemple.
+> - N'hésité pas à utiliser des outils de GenAI comme Gemini, Claude, ChatGPT pour rentrer dans des détails technique avec Claude Code, ou encore pour détailler et améliorer votre spécification ou pour trouver de nouvelles idées à intégrer. 
 
-### Sprint 1 : 
+### Sprint 1: 
 
 First, the goal of the initial sprint is to refine your ideas regarding the definition of requirements by drafting an initial functional specification document.Next, after finalizing the specifications, you can use the Project Accelerator to set up the AI agent tools and run a test to refine your initial output using Claude Code.
 
 #### Steps
 1. Understanding the use case and requirements
 
-2. Write the functional specification for the first sprint, you can 
+2. Write the functional specification for the first sprint.
 
-> [!TIP]
->You can use the provided specification template as a guide. 
 
-3. Create your DevSpace in BAS and get your project started using the Project Accelerator and your specifications
-
-4. Set up Claude Code
+//3. Create your DevSpace in BAS and get your project started using the Project Accelerator and your specifications
+//4. Set up Claude Code
 
 5. Review and iterate using Claude Code to finalize this first sprint
 
-#### Tips & Advice
+> [!TIP]
+> - You can use the provided specification template as a guide.
+> - You also have access to specification examples if you want to compare, refactor, add features or remove them.
+> - didn’t take much time to write the specifications, there is little time in comparison with the number of possible features. The goal is to understand and learn how to use this tool to meet business needs.
 
 
+### Sprint 2:
 
+This second sprint aims to add new data in the application such as scores, statuses, etc. And also a banner of KPIs integrated into the List Report. Of course you can also imagine other features to integrate. 
+
+> [!NOTE]
+> Adding the KPIs header is more complex for Claude Code, do not hesitate to iterate several times, ask him to plan the tasks properly, go into certain details or even give him errors from the navigation console. 
+
+### Sprint 3:
+
+The objective of this sprint is to work on the object page, integrating many additional information. You should know that this object page has already been initiated by the Project Accelerator (at least during our tests). Thus, it is interesting to carry out the same approach as for sprint 1, by auditing what has already been done upstream and identifying the elements to be added. You can also very well ask again to start from 0.
+
+> [!NOTE]
+> As for the KPI part on sprint 2, adding graph sections is more complex to integrate with the data schema. Did not hesitate to ask other AI, to iterate several times with Claude Code and to give him console errors. If errors persist on a chart or other addition, move to the next sprint to add the business rules and have the maximum content on your application.
+
+
+### Sprint 4:
+
+Finally, sprint 4 is the last big step of adding functionality. Its objective is to add business rules to manage blockages, closures, action summaries, etc. It is in this sprint that we will define high value-added business rules.
+
+// TODO Finir cette partie
+
+Expliquer le folder / srtructure
+
+TODO: faire comme le hands-on tuto de SAP avec des étapes et des fichiers différents pour chaque étape
+
+-> Description courte
+-> le fil rouge qui présente toutes les autres documentations aussi (exemple : prompt guide)
+
+Surtout expliquer l'organisation du dossier (codebase par sprint, les documents prompts dans assets, etc)
