@@ -77,52 +77,6 @@ After the gap 1, 2 and 3, we can see that Claude Code is better and very precise
 
 As before, adding charts, KPIs, etc. are always more complex to set up. It is necessary to iterate several times, giving him as much explanation as possible about the current behavior of the application and the errors in the console so that he can know what he needs to correct. It should (normally) converge towards the right solution and way of doing things.
 
-Result of the audit of claude code on the already existing Object Page part: 
-```markdown
-Audit Sprint 3 — Gaps identifiés
-GAP 1 — Titre de l'Object Page (mineur)
-Spec : Le titre doit afficher VendorName
-Actuel : Le @UI.HeaderInfo.Title pointe sur vendorID
-Fichier : annotations.cds
-GAP 2 — En-tête Object Page incomplet (mineur)
-Spec : Header contient VendorName, VendorID, Country, Category, RiskStatus (avec criticality)
-Actuel : Seul vendorName est en DataPoint dans le header
-Fichier : annotations.cds
-GAP 3 — Section "Données générales" inexistante (moyen)
-Spec : Section avec adresse, SIRET/Tax Number, données bancaires, gestionnaire
-Actuel : Ces champs n'existent nulle part — ni dans le schéma, ni dans les annotations, ni dans les CSV
-À créer : champs address, taxNumber, bankData, accountManager dans schema.cds + section Facet + données mock
-GAP 4 — Section "Activité & Score" inexistante + champs manquants (élevé)
-Spec : Section dédiée avec InactivityMonths, RiskScore, LastPODate, LastInvoiceDate, TotalPOAmount, PaymentDelayAvg, DeliveryDelayAvg
-Actuel : Pas de section "Activité & Score" sur l'Object Page. PaymentDelayAvg et DeliveryDelayAvg sont absents du schéma et du handler
-Dépendances : nécessite des champs sources dans POs (deliveryDate, plannedDeliveryDate) et Invoices (paymentDate, dueDate)
-Fichiers : schema.cds, service.js, annotations.cds
-GAP 5 — Table PO : colonne Statut manquante + tri (faible)
-Spec : Colonnes Date, Numéro, Montant, Statut — triées par date desc, 10 items max
-Actuel : Pas de status sur l'entité PurchaseOrders, pas de tri annoté sur la sous-table
-Fichiers : schema.cds, annotations.cds, PurchaseOrders.csv
-GAP 6 — Table Factures : colonnes manquantes + tri (moyen)
-Spec : Colonnes Date, Numéro, Montant, Statut paiement, Retard — triées par date desc, 10 items max
-Actuel : Seulement invoiceID, vendorID, lastInvoiceDate — montant, statut et retard absents
-Fichiers : schema.cds, annotations.cds, Invoices.csv
-GAP 7 — Section "Indicateurs graphiques" inexistante (élevé)
-Spec : Graphique à barres (@UI.Chart de type Bar) montrant l'évolution mensuelle du montant PO sur 12 mois
-Actuel : Rien n'existe — ni structure de données d'agrégation mensuelle, ni annotation chart
-Fichiers : service.cds, annotations.cds
-Récapitulatif
-#	Gap	Complexité
-1	Titre OP → VendorName	Faible
-2	En-tête : Country, Category, RiskStatus	Faible
-3	Section "Données générales" (nouveaux champs)	Moyenne
-4	Section "Activité & Score" + PaymentDelayAvg/DeliveryDelayAvg	Élevée
-5	Table PO : Statut + tri	Faible
-6	Table Factures : Montant + Statut paiement + Retard + tri	Moyenne
-7	Graphique barres mensuel PO	Élevée
-Note importante : Les GAPs 4 et 8 (PaymentDelayAvg / DeliveryDelayAvg) impactent aussi rétrospectivement le calcul du RiskScore défini en Sprint 2 — la spec prévoit +20 pts pour PaymentDelayAvg > 30j et +20 pts pour DeliveryDelayAvg > 15j, facteurs actuellement ignorés dans le handler.
-
-Souhaitez-vous que je commence l'implémentation de tout ou partie de ces éléments ?
-```
-
 Following this audit, we have iterated on each Gap for those added to the application. 
 
 > [!NOTE]
