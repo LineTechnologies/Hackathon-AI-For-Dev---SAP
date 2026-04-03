@@ -1,0 +1,93 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <!-- KPI summary bar injected above the List Report filter bar -->
+  <HBox
+    justifyContent="Start"
+    alignItems="Center"
+    wrap="Wrap"
+    class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+
+    <!-- Total active vendors -->
+    <GenericTile
+      header="Fournisseurs actifs"
+      frameType="TwoByHalf"
+      scope="Display"
+      class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+      <tileContent>
+        <TileContent>
+          <content>
+            <NumericContent
+              value="{kpi>/totalVendors}"
+              scale=""
+              indicator="None"
+              valueColor="Good"
+              withMargin="false"/>
+          </content>
+        </TileContent>
+      </tileContent>
+    </GenericTile>
+
+    <!-- Inactive vendors (inactivityMonths >= 12) -->
+    <GenericTile
+      header="Inactifs (&gt; 12 mois)"
+      frameType="TwoByHalf"
+      scope="Display"
+      class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+      <tileContent>
+        <TileContent>
+          <content>
+            <NumericContent
+              value="{kpi>/inactiveVendors}"
+              scale=""
+              indicator="None"
+              valueColor="Critical"
+              withMargin="false"/>
+          </content>
+        </TileContent>
+      </tileContent>
+    </GenericTile>
+
+    <!-- High-risk vendors (riskScore > 60 / riskStatus = Élevé) -->
+    <GenericTile
+      header="Risque élevé"
+      frameType="TwoByHalf"
+      scope="Display"
+      class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+      <tileContent>
+        <TileContent>
+          <content>
+            <NumericContent
+              value="{kpi>/highRiskVendors}"
+              scale=""
+              indicator="None"
+              valueColor="Error"
+              withMargin="false"/>
+          </content>
+        </TileContent>
+      </tileContent>
+    </GenericTile>
+
+    <!-- Percentage of blocked vendors -->
+    <GenericTile
+      header="% Bloqués"
+      frameType="TwoByHalf"
+      scope="Display"
+      class="sapUiTinyMarginBottom">
+      <tileContent>
+        <TileContent unit="%">
+          <content>
+            <NumericContent
+              value="{kpi>/blockedPercentage}"
+              scale=""
+              indicator="None"
+              valueColor="Critical"
+              withMargin="false"/>
+          </content>
+        </TileContent>
+      </tileContent>
+    </GenericTile>
+
+  </HBox>
+</core:FragmentDefinition>

@@ -77,7 +77,7 @@ After the gap 1, 2 and 3, we can see that Claude Code is better and very precise
 
 As before, adding charts, KPIs, etc. are always more complex to set up. It is necessary to iterate several times, giving him as much explanation as possible about the current behavior of the application and the errors in the console so that he can know what he needs to correct. It should (normally) converge towards the right solution and way of doing things.
 
-
+Result of the audit of claude code on the already existing Object Page part: 
 ```markdown
 Audit Sprint 3 — Gaps identifiés
 GAP 1 — Titre de l'Object Page (mineur)
@@ -122,3 +122,14 @@ Note importante : Les GAPs 4 et 8 (PaymentDelayAvg / DeliveryDelayAvg) impactent
 
 Souhaitez-vous que je commence l'implémentation de tout ou partie de ces éléments ?
 ```
+
+Following this audit, we have iterated on each Gap for those added to the application. 
+
+> [!NOTE]
+> Noted that the graphic part, gap 7, was the most complex to set up. A lot of error, a lot of iteration, but Claude Code managed to converge towards an interesting and functional result. However, we used other AI tools (Gemini) to guide us on technical topics, understanding errors and hypotheses.
+
+**Final Outcome:**
+
+![sprint3_preview2_1](images/sprint3_preview2_1.png)
+
+![sprint3_preview2_2](images/sprint3_preview2_2.png) 
