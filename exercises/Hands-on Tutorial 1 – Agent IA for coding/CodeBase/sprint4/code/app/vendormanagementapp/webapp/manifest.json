@@ -1,0 +1,166 @@
+{
+    "_version": "1.73.1",
+    "sap.app": {
+        "id": "vendormanagementapp",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:lrop",
+            "version": "1.22.0",
+            "toolsId": "68e079f2-3b86-4d11-80da-d6e134f6a2a5"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/odata/v4/long-tail-vendor-management-srv/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.136.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.fe.templates": {},
+                "sap.f": {},
+                "sap.suite.ui.microchart": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "vendormanagementapp.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "controllerExtensions": {
+            "sap.fe.templates.ListReport#VendorsList":    "vendormanagementapp.ext.ListReportExtension",
+            "sap.fe.templates.ObjectPage#VendorsObjectPage": "vendormanagementapp.ext.VendorsObjectPageExtension"
+        },
+        "routing": {
+            "config": {
+                "flexibleColumnLayout": {
+                    "defaultTwoColumnLayoutType": "TwoColumnsBeginExpanded",
+                    "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
+                },
+                "routerClass": "sap.f.routing.Router"
+            },
+            "routes": [
+                {
+                    "pattern": ":?query:",
+                    "name": "VendorsList",
+                    "target": [
+                        "VendorsList"
+                    ]
+                },
+                {
+                    "pattern": "Vendors({key}):?query:",
+                    "name": "VendorsObjectPage",
+                    "target": [
+                        "VendorsList",
+                        "VendorsObjectPage"
+                    ]
+                }
+            ],
+            "targets": {
+                "VendorsList": {
+                    "type": "Component",
+                    "id": "VendorsList",
+                    "name": "sap.fe.templates.ListReport",
+                    "options": {
+                        "settings": {
+                            "contextPath": "/Vendors",
+                            "variantManagement": "Page",
+                            "initialLoad": "Enabled",
+                            "navigation": {
+                                "Vendors": {
+                                    "detail": {
+                                        "route": "VendorsObjectPage"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "controlAggregation": "beginColumnPages",
+                    "contextPattern": ""
+                },
+                "VendorsObjectPage": {
+                    "type": "Component",
+                    "id": "VendorsObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "contextPath": "/Vendors"
+                        }
+                    },
+                    "controlAggregation": "midColumnPages",
+                    "contextPattern": "/Vendors({key})"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+            "type": "XML",
+            "async": true,
+            "id": "appRootView"
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    },
+    "sap.fe": {
+        "app": {
+            "enableLazyLoading": true
+        }
+    }
+}

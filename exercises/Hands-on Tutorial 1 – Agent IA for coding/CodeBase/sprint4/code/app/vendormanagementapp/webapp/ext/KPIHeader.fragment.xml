@@ -1,0 +1,161 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:mc="sap.suite.ui.microchart">
+
+  <VBox id="kpiRoot" class="sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom">
+
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         Barre de configuration : toujours visible, position fixe au-dessus des tiles
+    ═══════════════════════════════════════════════════════════════════════════════ -->
+    <HBox id="kpiSettingsRow" justifyContent="End" alignItems="Center" class="sapUiTinyMarginBottom">
+      <Button id="kpiSettingsBtn" icon="sap-icon://action-settings" type="Transparent"
+              tooltip="Configurer les indicateurs KPI"/>
+    </HBox>
+
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         Ligne KPI : Tuiles numériques
+         Par défaut seul "Montant à Risque" est visible.
+         Le bouton engrenage ci-dessus ouvre un popover pour afficher/masquer les autres.
+    ═══════════════════════════════════════════════════════════════════════════════ -->
+    <HBox id="kpiTilesRow" justifyContent="Start" alignItems="Center" wrap="Wrap"
+          class="sapUiTinyMarginBottom">
+
+      <GenericTile id="kpiTileRiskAmount" header="Montant à Risque (€)" frameType="TwoByHalf" scope="Display"
+                   class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+        <tileContent>
+          <TileContent id="kpiTileRiskAmountContent">
+            <content>
+              <NumericContent id="kpiNumRiskAmount" value="{kpi>/riskAmountAtRisk}" scale="k"
+                              indicator="Down" valueColor="Error" withMargin="false"/>
+            </content>
+          </TileContent>
+        </tileContent>
+      </GenericTile>
+
+      <GenericTile id="kpiTileActive" visible="false" header="Fournisseurs actifs" frameType="TwoByHalf" scope="Display"
+                   class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+        <tileContent>
+          <TileContent id="kpiTileActiveContent">
+            <content>
+              <NumericContent id="kpiNumActive" value="{kpi>/totalVendors}" scale=""
+                              indicator="None" valueColor="Good" withMargin="false"/>
+            </content>
+          </TileContent>
+        </tileContent>
+      </GenericTile>
+
+      <GenericTile id="kpiTileInactive" visible="false" header="Inactifs (&gt; 12 mois)" frameType="TwoByHalf" scope="Display"
+                   class="sapUiTinyMarginEnd sapUiTinyMarginBottom">
+        <tileContent>
+          <TileContent id="kpiTileInactiveContent">
+            <content>
+              <NumericContent id="kpiNumInactive" value="{kpi>/inactiveVendors}" scale=""
+                              indicator="None" valueColor="Critical" withMargin="false"/>
+            </content>
+          </TileContent>
+        </tileContent>
+      </GenericTile>
+
+      <!-- Cachées définitivement (remplacées par les graphiques) -->
+      <GenericTile id="kpiTileHighRisk" visible="false" header="Risque élevé" frameType="TwoByHalf" scope="Display">
+        <tileContent>
+          <TileContent id="kpiTileHighRiskContent">
+            <content>
+              <NumericContent id="kpiNumHighRisk" value="{kpi>/highRiskVendors}" scale=""
+                              indicator="None" valueColor="Error" withMargin="false"/>
+            </content>
+          </TileContent>
+        </tileContent>
+      </GenericTile>
+
+      <GenericTile id="kpiTileBlocked" visible="false" header="% Bloqués" frameType="TwoByHalf" scope="Display">
+        <tileContent>
+          <TileContent id="kpiTileBlockedContent" unit="%">
+            <content>
+              <NumericContent id="kpiNumBlocked" value="{kpi>/blockedPercentage}" scale=""
+                              indicator="None" valueColor="Critical" withMargin="false"/>
+            </content>
+          </TileContent>
+        </tileContent>
+      </GenericTile>
+
+    </HBox>
+
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         Graphiques analytiques (InteractiveBarChart)
+         color sur chaque barre = indicateur coloré à gauche du label
+         Câblage des événements dans Component.js via _wireChartHandlers()
+    ═══════════════════════════════════════════════════════════════════════════════ -->
+    <HBox id="kpiChartsRow" justifyContent="Start" alignItems="Start" wrap="Wrap" class="sapUiSmallMarginTop">
+
+      <!-- ── Statut de blocage ───────────────────────────────────────────────── -->
+      <Panel id="statusPanel" width="280px" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+             backgroundDesign="Translucent">
+        <headerToolbar>
+          <Toolbar id="statusToolbar" style="Clear" height="2.5rem">
+            <core:Icon id="statusIcon" src="sap-icon://status-inactive" color="#0854A0" class="sapUiTinyMarginEnd"/>
+            <Title id="statusTitle" text="Statut de blocage" level="H6" titleStyle="H6"/>
+          </Toolbar>
+        </headerToolbar>
+        <content>
+          <VBox id="statusChartBox" class="sapUiTinyMarginBeginEnd sapUiTinyMarginBottom">
+            <mc:InteractiveBarChart id="statusBarChart" selectionEnabled="true">
+              <mc:bars>
+                <mc:InteractiveBarChartBar id="statusBarActif"   label="Actif"               value="{kpi>/activeCount}"  displayedValue="{kpi>/activeCount}"  color="Good"/>
+                <mc:InteractiveBarChartBar id="statusBarBlocked" label="Bloqué"               value="{kpi>/blockedCount}" displayedValue="{kpi>/blockedCount}" color="Error"/>
+                <mc:InteractiveBarChartBar id="statusBarClosure" label="En cours de clôture"  value="{kpi>/closureCount}" displayedValue="{kpi>/closureCount}" color="Critical"/>
+              </mc:bars>
+            </mc:InteractiveBarChart>
+          </VBox>
+        </content>
+      </Panel>
+
+      <!-- ── Niveaux de risque ───────────────────────────────────────────────── -->
+      <Panel id="riskPanel" width="280px" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"
+             backgroundDesign="Translucent">
+        <headerToolbar>
+          <Toolbar id="riskToolbar" style="Clear" height="2.5rem">
+            <core:Icon id="riskIcon" src="sap-icon://alert" color="#BB0000" class="sapUiTinyMarginEnd"/>
+            <Title id="riskTitle" text="Niveaux de risque" level="H6" titleStyle="H6"/>
+          </Toolbar>
+        </headerToolbar>
+        <content>
+          <VBox id="riskChartBox" class="sapUiTinyMarginBeginEnd sapUiTinyMarginBottom">
+            <mc:InteractiveBarChart id="riskBarChart" selectionEnabled="true">
+              <mc:bars>
+                <mc:InteractiveBarChartBar id="riskBarLow"    label="Faible"  value="{kpi>/lowRiskCount}"    displayedValue="{kpi>/lowRiskCount}"    color="Good"/>
+                <mc:InteractiveBarChartBar id="riskBarMedium" label="Modéré"  value="{kpi>/mediumRiskCount}" displayedValue="{kpi>/mediumRiskCount}" color="Critical"/>
+                <mc:InteractiveBarChartBar id="riskBarHigh"   label="Élevé"   value="{kpi>/highRiskVendors}" displayedValue="{kpi>/highRiskVendors}" color="Error"/>
+              </mc:bars>
+            </mc:InteractiveBarChart>
+          </VBox>
+        </content>
+      </Panel>
+
+      <!-- ── Analyse de l'inactivité ─────────────────────────────────────────── -->
+      <Panel id="inactivityPanel" width="300px" class="sapUiTinyMarginBottom"
+             backgroundDesign="Translucent">
+        <headerToolbar>
+          <Toolbar id="inactivityToolbar" style="Clear" height="2.5rem">
+            <core:Icon id="inactivityIcon" src="sap-icon://time-entry-request" color="#E78C07" class="sapUiTinyMarginEnd"/>
+            <Title id="inactivityTitle" text="Analyse de l'inactivité" level="H6" titleStyle="H6"/>
+          </Toolbar>
+        </headerToolbar>
+        <content>
+          <VBox id="inactivityChartBox" class="sapUiTinyMarginBeginEnd sapUiTinyMarginBottom">
+            <mc:InteractiveBarChart id="inactivityBarChart" selectionEnabled="true">
+              <mc:bars>
+                <mc:InteractiveBarChartBar id="inactivityBar0to6"   label="&lt; 6 mois"  value="{kpi>/inactivity0to6}"   displayedValue="{kpi>/inactivity0to6}"   color="Good"/>
+                <mc:InteractiveBarChartBar id="inactivityBar6to12"  label="6 – 12 mois"  value="{kpi>/inactivity6to12}"  displayedValue="{kpi>/inactivity6to12}"  color="Critical"/>
+                <mc:InteractiveBarChartBar id="inactivityBar12plus" label="&gt; 12 mois" value="{kpi>/inactivity12plus}" displayedValue="{kpi>/inactivity12plus}" color="Error"/>
+              </mc:bars>
+            </mc:InteractiveBarChart>
+          </VBox>
+        </content>
+      </Panel>
+
+    </HBox>
+
+  </VBox>
+</core:FragmentDefinition>

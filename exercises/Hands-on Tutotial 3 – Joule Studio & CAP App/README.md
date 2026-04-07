@@ -18,5 +18,14 @@ Imaginer et "drafter" des use cases et scénarios où les agents
 ## Steps
 
 
-## 
+## 1. Switch from mock data to real S/4HANA data using BTP destionation 
+Through the first hands-on tutorial, we created a functional CAP application based on our functional specifications. However, this one uses mock data, which is very good for a first version expressing our needs. But we must now "connect" it to our S/4HANA.
 
+![StoryBoard](images/storyboard.png)
+
+
+
+## 2. Add Joule on the CAP application 
+
+
+## Try to trigger the aggent using prompts
