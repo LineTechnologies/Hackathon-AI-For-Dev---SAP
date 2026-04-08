@@ -80,3 +80,6 @@ You have the field of possibilities!
 As part of this hands-on tutorial, we have finished the exercise, you can switch to hands-on tutorial 2 on Joule Studio or on the sharing part.
 
 > Go to Hands-on Tutorial 2
+
+
+
