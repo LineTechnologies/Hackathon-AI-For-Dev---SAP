@@ -102,7 +102,20 @@ Créer une **Skill Joule** qui encapsule les actions SAP Build de blocage / déb
      - un récapitulatif s’affiche,
      - la confirmation est bien demandée,
      - l’action ne part qu’après validation.
+    
+## Livrables attendus
 
+- **Les Skills Joule configurées** :
+  - 1 Skill de blocage / déblocage fournisseur (Sprint 1),
+
+## Les étapes de création
+
+| #    | Steps    | Captures |
+| :--: | :--- |  :-----   |
+| 0 | Ouvrir SAP Build et naviguer vers les actions. Les actions sont les appels API qui peuvent sont configurés pour pouvoir être utilisés en tant que Skill. Il est possible d'importer un Swagger ou bien d'utiliser directement les APIs publiés par SAP sur le Business Accelerator Hub | ![alt text](images/SAPBuild_Landing.png) |
+| 1 | Toutes les actions que vous trouverez ici ne sont pas forcément utiles pour répondre au besoin, vous pouvez les analyser pour voir ce qui répond le mieux au besoin | ![alt text](images/Actions.png) |
+| 2 | Revenez au lobby, puis ouvrez le projet Joule Studio - Hackathon 2026, puis commencez la création du skill | ![alt text](images/EmptySkill.png) |
+| 3 | Voici un exemple de skill complet, notez toutefois qu'il n'existe pas qu'une unique solution au besoin, n'hésitez pas à proposer votre proche approche. | ![alt text](images/CompletedSkill.png) |
 ---
 
 ## Sprint 2 – Skill d’évaluation fournisseur
@@ -203,5 +216,3 @@ Construire un **Agent Joule** qui, à partir d’une simple question de l’util
 - **Testez en langage naturel** dès que possible pour valider que le comportement est compréhensible du point de vue métier.
 - **Repérez les “pièges”** dans les actions SAP Build : toutes ne servent pas au scénario. Justifiez vos choix.
 - **Gardez la main humaine** : aucune action sensible (blocage) ne doit être exécutée sans confirmation explicite dans la conversation. 
-
-Bon workshop et amusez-vous avec Joule Studio !
