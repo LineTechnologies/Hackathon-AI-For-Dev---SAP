@@ -5,6 +5,9 @@ Welcome to this Hands-on Tutorial! In this exercise, you will learn how to lever
 
 You can follow this step-by-step hands-on to fully realize the guided use case. We recommend that you follow the first steps, if necessary, to set up Claude Code, optimize it and discover tips on its use. Then, to write the specifications, use the Project Accelerator and perform the iterations by yourself to take control of the tools and assimilate this new development method.
 
+> ![IMPORTANT]
+> This practical tutorial is based on the use of Claude Code to illustrate iterative processes. If you use another programming agent (like Cline), the approach remains the same. Only the installation step differs due to the specific interfaces of each tool, but the fundamental concepts—MCP servers, project rules, and planning/execution modes — remain the same.
+
 ## Repository Structure & The "Red Thread"
 To help you navigate this tutorial successfully, we have structured this folder as a comprehensive toolkit. The AI-assisted development lifecycle relies heavily on good inputs and context. Here is how the folders guide you through the process:
 
@@ -53,11 +56,12 @@ The Accelerator project is a tool integrated into BAS that allows you to generat
 | :--: | :--- |  :-----   |
 | 0 | Open SAP Business Application Studio and create a devspace named “Full-Stack Application Using Productivity Tools,” which is a prerequisite for creating the CAP/ Fiori application. |  |
 | 1 | In the cockpit BTP, let's access to instance and click on SAP Business Application Studio. <br> Then, let click in the button in the right area of the window and select Buisness Application Studio. | ![Command result](./images/PA_Step1.png) <br> ![Command result](./images/PA_Step1_bis.png) |
-| 2 | After that, select the Joule buton in the left sidebar. <br> trhen, choice the command /fiori-gen-spec-app and enter a short description of the application that you want to create. | ![Command result](./images/PA_Step2.png) |
-| 3 | Click on the button "Launch SAP Fiori Tools - Project Accelerator". If everything works, you should see the new Project Accelerator window. |  ![Command result](./images/PA_Step3.png) |
-| 4 | After that, give your Business requirements in the text area, or select a file such as your figma / paper mockup or your business requirement in .docx or .md format. <br> Click on "Generate" to start the initialization of the application. |  ![Command result](./images/PA_Step4.png) |
-| 5 | After the process, you can see the generated project (here a CAP project). You can modify some rules and options with the no-code approach (like switch to the flexible display format), and you can preview the application. |  ![Command result](./images/PA_Step5.png) |
-| 6 | If everything went well, you should see the app! |  ![Command result](./images/PA_Step6.png)|
+| 2 | Now, you can create your devspace by choosing the project type "Full-Stack Application Using Productivity Tools Dev Space" and indicating the name of the DevSpace. | ![Create DevSpace](images/create_devspace.png) |
+| 3 | After that, select the Joule buton in the left sidebar. <br> trhen, choice the command /fiori-gen-spec-app and enter a short description of the application that you want to create. | ![Command result](./images/PA_Step2.png) |
+| 4 | Click on the button "Launch SAP Fiori Tools - Project Accelerator". If everything works, you should see the new Project Accelerator window. |  ![Command result](./images/PA_Step3.png) |
+| 5 | After that, give your Business requirements in the text area, or select a file such as your figma / paper mockup or your business requirement in .docx or .md format. <br> Click on "Generate" to start the initialization of the application. |  ![Command result](./images/PA_Step4.png) |
+| 6 | After the process, you can see the generated project (here a CAP project). You can modify some rules and options with the no-code approach (like switch to the flexible display format), and you can preview the application. |  ![Command result](./images/PA_Step5.png) |
+| 7 | If everything went well, you should see the app! |  ![Command result](./images/PA_Step6.png)|
 
 
 ## 3. Set up Claude code
@@ -229,13 +233,9 @@ First, the goal of the initial sprint is to refine your ideas regarding the defi
 
 #### Steps
 1. Understanding the use case and requirements
-
 2. Write the functional specification for the first sprint.
-
-
-//3. Create your DevSpace in BAS and get your project started using the Project Accelerator and your specifications
-//4. Set up Claude Code
-
+3. Create your DevSpace in BAS and get your project started using the Project Accelerator and your specifications
+4. Set up Claude Code
 5. Review and iterate using Claude Code to finalize this first sprint
 
 > [!TIP]
