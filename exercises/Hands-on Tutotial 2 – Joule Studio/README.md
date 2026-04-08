@@ -96,8 +96,8 @@ Créer une **Skill Joule** qui encapsule les actions SAP Build de blocage / déb
 
 5. **Tester en conversation**
    - Depuis Joule, testez des phrases comme :
-     - « Bloque le fournisseur 1000001 »
-     - « Débloque le fournisseur 1000001 »  
+     - « Bloque le fournisseur 12300010 »
+     - « Débloque le fournisseur 12300010 »  
    - Validez que :
      - un récapitulatif s’affiche,
      - la confirmation est bien demandée,
@@ -115,7 +115,10 @@ Créer une **Skill Joule** qui encapsule les actions SAP Build de blocage / déb
 | 0 | Ouvrir SAP Build et naviguer vers les actions. Les actions sont les appels API qui peuvent sont configurés pour pouvoir être utilisés en tant que Skill. Il est possible d'importer un Swagger ou bien d'utiliser directement les APIs publiés par SAP sur le Business Accelerator Hub | ![alt text](images/SAPBuild_Landing.png) |
 | 1 | Toutes les actions que vous trouverez ici ne sont pas forcément utiles pour répondre au besoin, vous pouvez les analyser pour voir ce qui répond le mieux au besoin | ![alt text](images/Actions.png) |
 | 2 | Revenez au lobby, puis ouvrez le projet Joule Studio - Hackathon 2026, puis commencez la création du skill | ![alt text](images/EmptySkill.png) |
-| 3 | Voici un exemple de skill complet, notez toutefois qu'il n'existe pas qu'une unique solution au besoin, n'hésitez pas à proposer votre proche approche. | ![alt text](images/CompletedSkill.png) |
+| 3 | L'élément déterminant du Skill va être la configuration de l'action. Une fois celle-ci choisie, il vous faudra dans un premier temps indiquer une variable de destination. Les destinations sont les éléments permettant à l'agent de s'authentifier lors d'un appel API, ils contiennent les credentials et le endpoint à appeler. | ![alt text](images/CreateAction.png) |
+| 4 | Ensuite, comme pour un appel API classique, on indique les paramètres de l'appel que Joule doit effectuer. | ![alt text](images/ActionInput.png) |
+| 5bis | Attention, pour s'assurer que les paramètres soient envoyés correctement, il est conseillé de les indiquer depuis l'éditeur de formule. | ![alt text](images/ApplyFormula.png) |
+| 5 | Voici un exemple de skill complet, notez toutefois qu'il n'existe pas qu'une unique solution au besoin, n'hésitez pas à proposer votre proche approche. | ![alt text](images/CompletedSkill.png) |
 ---
 
 ## Sprint 2 – Skill d’évaluation fournisseur
@@ -127,12 +130,12 @@ Créer une **Skill Joule** qui encapsule les actions SAP Build de blocage / déb
 
 ### Objectif
 
-Créer une **Skill Joule d’évaluation** qui utilise une action SAP Build pour récupérer les données de scoring ou d’évaluation d’un fournisseur dans S/4HANA, et qui calcule ou expose un **score** selon les critères définis dans le système (ou dans votre logique). [page:1]
+Créer une **Skill Joule d’évaluation** qui utilise une action SAP Build pour récupérer les données de scoring ou d’évaluation d’un fournisseur dans S/4HANA, et qui calcule ou expose un **score** selon les critères définis dans le système (ou dans votre logique).
 
 ### Étapes proposées
 
 1. **Analyser l’action d’évaluation**
-   - Parcourez les actions SAP Build disponibles pour trouver celles qui renvoient :
+   - Parcourez les actions SAP Build disponibles pour trouver celle qui renvoit :
      - des scores,
      - des indicateurs de fiabilité, conformité, performance, etc.
 
@@ -155,6 +158,8 @@ Créer une **Skill Joule d’évaluation** qui utilise une action SAP Build pour
      - la Skill est appelée,
      - les données remontent,
      - le score ou la conclusion sont compréhensibles pour un utilisateur métier.
+    
+Pour ce Skill, l'essentiel est que l'agent soit capable de récupérer les éléments de notation. Il n'est pas obligatoire d'inclure une logique selon le score, celle-ci peut être définie dans le sprint 3.
 ---
 
 ## Sprint 3 – Agent Joule décisionnel
@@ -199,13 +204,15 @@ Construire un **Agent Joule** qui, à partir d’une simple question de l’util
 
 5. **Scénarios de test**
    - Essayez des prompts comme :
-     - « Analyse le fournisseur 1000001 et dis-moi si je dois le bloquer. »
+     - « Peux tu me faire une recommendation sur les fournisseurs 1000036, 12300001 et 12300010? »
      - « Est-ce que ce fournisseur présente un risque ? »  
    - Vérifiez que l’agent :
      - récupère l’évaluation,
      - explique sa recommandation,
      - propose ensuite d’exécuter le blocage / déblocage via la Skill appropriée,
      - demande toujours la **validation finale** avant d’exécuter l’action.
+
+Exemple de rendu final : ![alt text](images/RenduFinal.png)
 
 ---
 
