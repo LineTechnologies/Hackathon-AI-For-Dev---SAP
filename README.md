@@ -12,7 +12,7 @@ This workshop is designed to be highly collaborative. To tackle the challenge of
 
 * **Team 1:** AI for App Dev (Claude Code). Your mission will be to generate the complete business application (SAP CAP backend and Fiori frontend) by guiding an AI agent specialized in coding.
 * **Team 2:** AI for Agents (Joule Studio). Your mission will be to create and configure intelligent assistants capable of interacting in natural language to perform business actions.
-* **Convergence Activity:** The Docking. The two teams will come together in a final phase to connect the business application to the Joule assistant, thereby creating a unified and intelligent solution.
+* **Convergence Activity:** The Docking. The two teams will come together in a final phase to explain their work on the two previous activities and to be able to prepare the report. Also, if time allows us, the teams will be able to explore the possibilities of connecting the business application to the Joule assistant, thereby creating a unified and intelligent solution.
 
 ## The Use Case (Serious Game)
 Over time, the supplier database has expanded significantly and now includes a “long tail” of suppliers with little or no activity. This degrades data quality and increases operational risks (poor supplier selection, outdated data, more complex controls). Your goal is to build an innovative solution to identify, analyze, and clean this database using the latest generative AI capabilities.
@@ -45,10 +45,8 @@ Final Presentation: At the end of the workshop, the unified group will present i
     - [Hands-on Tutorial 2](exercises/ex0/)
 
 - [Hands-on Tutotial 3 – Joule Studio & CAP App](exercises/Hands-on%20Tutorial%203%20–%Joule%20Studio%20&%20CAP%20App/)
-    - Connecting CAP Application to S/4HANA backend system
-    - Integrate Joule un CAP Application
-    - Tests to trigger your created agent using natural langague
-    - Create new buton that write a report based on news (using your agent)
+    - [Connecting CAP Application to S/4HANA backend system](exercises/Hands-on%20Tutotial%203%20–%20Joule%20Studio%20&%20CAP%20App/#1-switch-from-mock-data-to-real-s4hana-data-using-btp-destination)
+    - [Joule & CAP — Bridging Two Worlds](exercises/Hands-on%20Tutotial%203%20–%20Joule%20Studio%20&%20CAP%20App/#2-joule--cap--bridging-two-worlds)
 
 ## Documentation & Useful Resources
 During this workshop, you’ll find valuable resources in the documentation folder to help you with your prompts:

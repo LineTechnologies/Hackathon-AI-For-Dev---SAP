@@ -1,28 +1,210 @@
-# Getting Started
+# Long Tail Vendor Management
 
-Welcome to your new project.
+Application SAP Fiori Elements pour identifier et gérer les fournisseurs inactifs dans S/4HANA.
 
-It contains these folders and files, following our recommended project layout:
+Développée dans le cadre du **LVMH TECH Hackathon AI FOR DEV – SAP** en 4 sprints itératifs : Sprint 1 via SAP Project Accelerator, Sprints 2–4 via Claude Code.
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+---
 
+## Contexte métier
 
-## Next Steps
+Au fil du temps, le référentiel fournisseurs d'une entreprise accumule une « long tail » de fournisseurs avec peu ou pas d'activité récente. Cette situation génère plusieurs risques :
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+- Prolifération de fournisseurs sans Bon de Commande ni facture récente
+- Données bancaires et coordonnées potentiellement obsolètes
+- Difficulté à identifier visuellement les fournisseurs inactifs ou à risque dans les outils standard S/4HANA
+- Actions de nettoyage (blocage, clôture) disperses et non tracées
 
+**L'application permet aux acheteurs et contrôleurs SAP de :**
 
-## Learn More
+- Visualiser rapidement les fournisseurs inactifs ou sous-actifs
+- Consulter un score de risque calculé automatiquement (inactivité, retards de paiement, retards de livraison, complétude des données)
+- Naviguer vers la fiche détail d'un fournisseur pour un diagnostic complet
+- Exécuter des actions métier (blocage, déblocage, demande de clôture) directement depuis l'application
+- Synchroniser les données depuis les API S/4HANA standard
 
-Learn more at https://cap.cloud.sap/docs/get-started/.
+---
 
+## Fonctionnalités
 
-This CAP project and the included SAP Fiori application were generated with the Project Accelerator, using the prompt: \*\*LVMH TECH\*\* \_HACKATHON AI FOR DEV – SAP\_ \*\*Spécifications Fonctionnelles\*\* Application Fiori — Long Tail Vendor Management \_Tous Sprints — Sprint 1 via Project Accelerator | Sprints 2–4 via Claude Code\_ \*\*Version\*\* 1.0 – Sprint 1 initial \*\*Date\*\* 01 avril 2026 \*\*Périmètre\*\* SAP CAP + Fiori Elements – Évolutions itératives \*\*Outil Sprint 1\*\* SAP BAS — Project Accelerator \*\*Outil Sprint 2–4\*\* Claude Code (itérations) \*\*Prérequis\*\* Draft v1.0 1\. Contexte &amp; Problématique 1.1 Contexte métier Avec le temps, le référentiel fournisseurs s’est fortement élargi et contient une « Long Tail » de fournisseurs avec peu ou pas d’activité. Cette situation dégrade la qualité des données maîtres et augmente les risques opérationnels au sein du système S&#x2F;4HANA : mauvais choix de fournisseur lors d’une commande, données bancaires obsolètes, contrôles de conformité plus complexes. 1.2 Problèmes identifiés \* Prolifération du référentiel fournisseurs sans activité récente (aucun Bon de Commande &#x2F; aucune facture sur une période définie). \* Difficulté à identifier visuellement les fournisseurs inactifs ou à risque dans les outils standard S&#x2F;4HANA. \* Absence d’un score de risque &#x2F; propreté agrégant les indicateurs clés (retards de paiement, retards de livraison, données incomplètes). \* Actions de nettoyage (blocage, déblocage, demande de clôture) disperses et non tracées. \* Aucune intégration IA pour assister les acheteurs dans la prise de décision. 1.3 Objectif produit Développer une \*\*application Fiori « Long Tail Vendor Management »\*\* qui permet aux acheteurs et contrôleurs SAP de : \* Identifier et visualiser rapidement les fournisseurs inactifs ou sous-actifs. \* Consulter un score de risque &#x2F; propreté calculé automatiquement par l’application. \* Naviguer vers la fiche détail d’un fournisseur pour un diagnostic complet. \* Exécuter des actions métier (blocage, déblocage, demande de clôture) directement depuis l’application. \* Bénéficier de recommandations IA via un Joule Agent intégré. L’application est construite sur \*\*SAP CAP (Cloud Application Programming Model)\*\* avec \*\*SAP Fiori Elements\*\*, garantissant un alignement avec les standards SAP UX et une intégration native dans le SAP Launchpad. 1.4 Approche de développement \_&#x2F;&#x2F; Définir les sprints\_ Le développement suit une approche \*\*Serious Game &#x2F; Time-boxed\*\* découpée en Sprints itératifs : \*\*Sprint\*\* \*\*Titre\*\* \*\*Périmètre\*\* \*\*Sprint 1 ★\*\* Expression de besoin &amp; Mock-up List Report + filtres + entités principales | Outil : Project Accelerator (BAS) \*\*Sprint 2\*\* Insights &amp; KPI Score de risque, statut, en-tête de synthèse | Outil : Claude Code \*\*Sprint 3\*\* Navigation &amp; Object Page Page de détail fournisseur, indicateurs, navigation | Outil : Claude Code \*\*Sprint 4\*\* Actions métier &amp; Intégration Joule Boutons d’action, Joule Skill &#x2F; Agent | Outil : Claude Code + Joule Studio ★ Le présent document couvre exclusivement le \*\*Sprint 1\*\*, destiné à initier le projet via le \*\*SAP Business Application Studio – Project Accelerator\*\*. \*\*Architecture générale de l&#39;application\*\* ========================================== \*\*Stack technique\*\* ------------------- \*\*Couche\*\* \*\*Technologie\*\* \*\*Rôle\*\* \*\*Backend service\*\* SAP CAP (Node.js) Service OData V4, logique métier, handlers \*\*Modèle de données\*\* CDS (.cds) Entités, relations, annotations UI \*\*Frontend\*\* SAP Fiori Elements (UI5) List Report, Object Page, KPI Header \*\*Annotations UI\*\* annotations.cds SelectionFields, LineItem, Charts, Actions \*\*Mock data\*\* data&#x2F;\\*.json Jeux de test locaux (dev &#x2F; avant intégration S&#x2F;4) \*\*Intégration SAP\*\* Remote Service + Destination BTP Connexion S&#x2F;4HANA (phase post-hackathon) \*\*Structure de fichiers cible initiale\*\* ---------------------------------------- po-control-tower&#x2F; ├── db&#x2F; │ ├── schema.cds ← Entités + champs calculés │ └── data&#x2F; ← Mock JSON (PurchaseOrderItems, Stocks…) ├── srv&#x2F; │ ├── po-service.cds ← Définition du service OData V4 │ ├── po-service.js ← Handlers CAP (actions, calculs, events) │ └── annotations&#x2F; │ ├── annotations.cds ← UI.LineItem, SelectionFields, Charts… │ ├── actions.cds ← @UI.DataFieldForAction (Sprint 4) │ └── recommendations.cds ← What-if + stock risk (Sprint 5) ├── app&#x2F; │ └── po-monitor&#x2F; │ ├── webapp&#x2F; │ │ ├── manifest.json ← Config Fiori (navigation, routes) │ │ └── ext&#x2F; ← Extensions custom (Sprint 4&#x2F;5) │ └── fiori.html └── package.json \*\*SPRINT 1 …\*\* \*\*Sprint 1 —\*\* \*\*Expression de Besoin &amp; Initialisation Application\*\* ==================================================================== \*\*1\. Objectif métier - Vision fonctionnelle\*\* ---------------------------------------------- Le Sprint 1 a pour but de poser les bases de l’application en générant le squelette CAP&#x2F;Fiori via le Project Accelerator. Le livrable est une \*\*List Report\*\* permettant de consulter et filtrer le référentiel fournisseurs. Cette vue centrale est le point d’entrée de l’acheteur pour identifier rapidement les fournisseurs à traiter. \*\*2\. Données et Périmètre\*\* ---------------------------- Les entités principales impliquées dans ce sprint : \*\*Entité CDS\*\* \*\*Source SAP\*\* \*\*Description\*\* \*\*Vendors\*\* BP &#x2F; LFA1 (S&#x2F;4HANA) Données de base fournisseurs (id, nom, pays, catégorie, statut de blocage) \*\*PurchaseOrders\*\* EKKO&#x2F;EKPO (S&#x2F;4HANA) Bons de commande associés au fournisseur (dernière date, montant) \*\*Invoices\*\* BSEG &#x2F; FI documents Factures fournisseurs (dernière date, montant total, retards) \*\*3\. Détail des Fonctionnalités\*\* ---------------------------------- \#\#\# \*\*3.1 Feature 1 — List Report : Vue principale des fournisseurs\*\* \#\#\#\# 3.1.1 Description générale La vue principale est une \*\*List Report Fiori Elements\*\* affichant le référentiel fournisseurs enrichi avec des indicateurs d’activité. L’utilisateur accède à cette liste depuis le SAP Launchpad. Elle constitue le point d’entrée unique pour piloter le nettoyage du référentiel. \#\#\#\# 3.3.2 Colonnes de la liste (UI.LineItem) \*\*Couche\*\* \*\*Technologie\*\* \*\*Rôle\*\* \*\*VendorID\*\* \_String (clé)\_ Identifiant unique du fournisseur (clé primaire) \*\*VendorName\*\* \_String\_ Dénomination sociale du fournisseur \*\*Country\*\* \_String\_ Pays d’origine du fournisseur (code ISO) \*\*Category\*\* \_String\_ Catégorie d’achat (ex. IT, Logistique, Services…) \*\*LastPODate\*\* \_Date\_ Date du dernier Bon de Commande enregistré pour ce fournisseur \*\*LastInvoiceDate\*\* \_Date\_ Date de la dernière facture reçue \*\*TotalPOAmount\*\* \_Decimal\_ Montant total des PO sur les 12 derniers mois (devise entreprise) \*\*InactivityMonths\*\* \_Integer (calculé)\_ Nombre de mois depuis la dernière activité (PO ou facture). Calculé côté CAP : différence entre la date du jour et max(LastPODate, LastInvoiceDate). \*\*BlockingStatus\*\* \_String (enum)\_ Statut de blocage SAP actuel : Actif | Bloqué | En cours de clôture \#\#\#\# 3.1.3 Règles de gestion (Business Rules) \* InactivityMonths est un champ calculé côté serveur CAP, non stocké en base. \* Un fournisseur est considéré « inactif » si InactivityMonths &gt;= 12. \* Un fournisseur est considéré « sous-actif » si 6 &lt;= InactivityMonths &lt; 12. \* Le champ BlockingStatus reflète le statut de blocage réel dans S&#x2F;4HANA (en phase mock : valeurraisonnablement initialisée dans les données JSON). \#\#\#\# 3.1.3 Comportement de l&#39;Interface \* La liste est triée par défaut sur InactivityMonths descendant (fournisseurs les plus inactifs en premier). \* Le champ InactivityMonths est mis en évidence avec un « Criticality » : rouge (&gt;= 12), orange (6–12), vert (&lt; 6). \* La liste est paginable (standard Fiori Elements). \* Un bouton « Export Excel » standard SAP est disponible. \#\#\# \*\*3.2 Feature 2 — Filter Bar : Critères de recherche\*\* \#\#\#\# 3.2.1 Description générale Une barre de filtres (SelectionFields) permet à l’utilisateur de restreindre la liste selon plusieurs critères. Les filtres sont définis dans les annotations CDS. \#\#\#\# 3.2.2 Filtres disponibles (SelectionFields) \*\*Filtre\*\* \*\*Type de contrôle\*\* \*\*Comportement\*\* \*\*Country\*\* \_Select &#x2F; Value Help\_ Filtrage par pays (liste de valeurs) \*\*Category\*\* \_Select &#x2F; Value Help\_ Filtrage par catégorie d’achat \*\*BlockingStatus\*\* \_Select (enum)\_ Actif | Bloqué | En cours de clôture | Tous \*\*InactivityMonths\*\* \_Range (Integer)\_ Plage : ex. « &gt; 12 mois » pour cibler inactifs \*\*LastPODate\*\* \_DateRange\_ Plage de dates du dernier BC \#\#\#\# 3.2.3 Comportement de l&#39;Interface \* La barre de filtres est affichée par défaut en mode « expanded » (paramètre manifest.json). \* Un bouton « Adapt Filters » standard permet d’ajouter des filtres supplémentaires. \* L’application est livrée avec un variant de filtres pré-configuré « Fournisseurs inactifs » (InactivityMonths &gt; 12). \#\#\# \*\*3.2 Feature 3 — Données Mock (Développement local)\*\* \#\#\#\# 3.2.1 Description générale Pour la phase de développement, les données réelles S&#x2F;4HANA sont simulées via des fichiers JSON placés dans \*\*db&#x2F;data&#x2F;\*\*. Ces fichiers doivent représenter un jeu de données réaliste pour valider les règles de gestion et l’affichage. \#\#\#\# 3.2.2 Jeux de données requis \* Minimum 20 fournisseurs avec diversité de profils (actifs, sous-actifs, inactifs, bloqués). \* Pour chaque fournisseur : au moins 1 à 3 PurchaseOrders et 1 à 2 Invoices. \* Les dates doivent couvrir une plage de 3 ans pour simuler l’inactivité. \* Au moins 5 fournisseurs avec InactivityMonths &gt; 12 (inactifs), 5 avec 6–12 (sous-actifs)..
+### Liste des fournisseurs (List Report)
+- Tableau filtrable avec indicateurs de criticité colorés (vert / orange / rouge)
+- Filtres : pays, catégorie, statut de blocage, mois d'inactivité, date du dernier BC
+- KPI synthétiques en en-tête : total fournisseurs, inactifs, haut risque, montant à risque
+- Colonnes : ID, nom, pays, catégorie, date dernier BC, date dernière facture, montant PO, mois d'inactivité, score de risque, statut
+
+### Fiche fournisseur (Object Page)
+- En-tête avec nom, pays/catégorie, statut de risque coloré, statut de blocage
+- Onglet **Détails** : informations générales, adresse, données fiscales et bancaires, responsable compte
+- Onglet **Bons de commande** : liste avec dates, montants, statuts de livraison
+- Onglet **Factures** : liste avec dates d'échéance, statuts et retards de paiement
+- Actions métier : **Bloquer**, **Débloquer**, **Demander la clôture** (avec saisie de motif)
+- Journal des actions tracé (historique horodaté par utilisateur)
+
+### Score de risque
+Calculé côté serveur CAP, combinant :
+- **Inactivité** — mois depuis la dernière activité PO ou facture
+- **Retards de paiement moyens** — jours de retard moyen sur les factures
+- **Retards de livraison moyens** — jours de retard moyen sur les bons de commande
+- **Complétude des données** — adresse, données fiscales, données bancaires
+
+Résultat : score 0–100 avec statut `Faible` / `Moyen` / `Élevé`, affiché avec criticité colorée.
+
+### Synchronisation S/4HANA
+Action `Sync S/4HANA` qui consomme 3 API S/4HANA standard :
+- `API_BUSINESS_PARTNER` — données fournisseurs (Business Partners)
+- `CE_PURCHASEORDER_0001` — bons de commande
+- `API_SUPPLIERINVOICE_PROCESS_SRV` — factures fournisseurs
+
+---
+
+## Stack technique
+
+| Couche | Technologie |
+|---|---|
+| Backend | SAP CAP (Node.js) — service OData V4 |
+| Modèle de données | CDS (`.cds`) — entités, relations, annotations UI |
+| Frontend | SAP Fiori Elements (UI5 1.136) — List Report + Object Page |
+| Annotations UI | `annotations.cds` — SelectionFields, LineItem, Facets, Actions |
+| Base de données (dev) | SQLite in-memory (via `@cap-js/sqlite`) |
+| Intégration SAP | Remote Services + Destinations BTP (profil `hybrid`) |
+| Sandbox API | SAP API Business Hub (profil `sandbox`) |
+
+---
+
+## Architecture des fichiers
+
+```
+├── app/
+│   ├── vendormanagementapp/        ← Application Fiori Elements
+│   │   ├── annotations.cds         ← Toutes les annotations UI (colonnes, filtres, actions)
+│   │   ├── webapp/
+│   │   │   ├── manifest.json       ← Routing, modèle OData, configuration UI5
+│   │   │   ├── ext/                ← Extensions custom (KPI header, boutons d'action)
+│   │   │   └── i18n/               ← Libellés multilingues (FR/EN)
+│   │   └── _i18n/                  ← Libellés pour les annotations CDS
+│   └── services.cds                ← Import des annotations UI
+├── db/
+│   └── schema.cds                  ← Modèle de données : Vendors, PurchaseOrders, Invoices, ActionLog
+├── srv/
+│   ├── service.cds                 ← Service OData V4 exposé (projections + actions)
+│   ├── service.js                  ← Handlers CAP (calculs, sync S/4, actions métier)
+│   └── external/                   ← Modèles EDMX des API S/4HANA importées
+├── test/
+│   └── data/                       ← Données CSV de mock (chargées automatiquement en dev)
+└── docs/
+    └── guide-integration-s4hana.md ← Guide de connexion aux API S/4HANA réelles
+```
+
+---
+
+## Modèle de données
+
+### `Vendors` — entité principale (draft-enabled)
+
+| Champ | Type | Description |
+|---|---|---|
+| `vendorID` | String | Identifiant S/4HANA du fournisseur |
+| `vendorName` | String | Dénomination sociale |
+| `country` | String(3) | Pays (code ISO) |
+| `category` | String | Catégorie d'achat |
+| `blockingStatus` | String | `Actif` \| `Bloqué` \| `En cours de clôture` |
+| `lastPODate` | Date | Date du dernier Bon de Commande |
+| `lastInvoiceDate` | Date | Date de la dernière facture |
+| `totalPOAmount` | Decimal | Montant total des PO |
+| `inactivityMonths` | Integer (virtual) | Mois depuis la dernière activité (calculé) |
+| `riskScore` | Integer (virtual) | Score de risque 0–100 (calculé) |
+| `riskStatus` | String (virtual) | `Faible` \| `Moyen` \| `Élevé` (calculé) |
+
+### `PurchaseOrders` — N:1 vers Vendors
+Champs clés : `purchaseOrderID`, `lastPODate`, `totalPOAmount`, `status`, `plannedDeliveryDate`, `deliveryDate`
+
+### `Invoices` — N:1 vers Vendors
+Champs clés : `invoiceID`, `lastInvoiceDate`, `dueDate`, `paymentDate`, `totalAmount`, `paymentStatus`, `paymentDelay`
+
+### `ActionLog` — journal des actions métier
+Champs clés : `vendorID`, `action` (`Block` | `Unblock` | `RequestClosure`), `actionDate`, `user`, `reason`
+
+---
+
+## Démarrage
+
+### Prérequis
+- Node.js LTS
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Mode développement — données mock locales
+
+```bash
+# Avec hot reload et ouverture automatique du navigateur
+npm run watch-vendormanagementapp
+```
+
+Application : `http://localhost:4004/vendormanagementapp/webapp/index.html`
+
+Endpoint OData : `http://localhost:4004/odata/v4/long-tail-vendor-management-srv/`
+
+### Mode sandbox — API SAP Business Hub
+
+Créer un fichier `default-env.json` à la racine avec votre clé API :
+
+```json
+{
+  "S4_API_KEY": "votre-clé-api-sap"
+}
+```
+
+```bash
+npm run sandbox
+```
+
+### Mode hybrid — API S/4HANA réelles via destinations BTP
+
+Configurer les destinations BTP dans `default-env.json` (`s4_sandbox_BusinessPartner`, `s4_sandbox_PurchaseOrder`, `s4_sandbox_SupplierInvoices`), puis :
+
+```bash
+npm run watch-vendormanagementapp-prod
+```
+
+Voir le [guide d'intégration S/4HANA](docs/guide-integration-s4hana.md) pour la configuration complète.
+
+---
+
+## Linting
+
+```bash
+# Lint racine (règles CDS SAP)
+npx eslint .
+
+# Lint application Fiori (règles UI5)
+cd app/vendormanagementapp && npx eslint .
+```
+
+---
+
+## Données de test
+
+En mode développement, CAP charge automatiquement les fichiers CSV depuis `test/data/` au démarrage. Le jeu de données couvre tous les profils de fournisseurs pour valider les règles de gestion et l'affichage :
+
+- ~18% actifs récents (inactivité < 6 mois) — criticité verte
+- ~17% actifs sous-actifs (6–11 mois) — criticité orange
+- ~25% actifs inactifs (12–30 mois) — criticité rouge
+- ~18% bloqués (15–36 mois d'inactivité)
+- ~22% en cours de clôture (24–48 mois d'inactivité)
+
+---
+
+## Développement itératif — Sprints
+
+| Sprint | Titre | Périmètre | Outil |
+|---|---|---|---|
+| **Sprint 1** | Initialisation | List Report + filtres + entités principales | SAP Project Accelerator (BAS) |
+| **Sprint 2** | Insights & KPI | Score de risque, statut, en-tête KPI | Claude Code |
+| **Sprint 3** | Navigation & Object Page | Fiche détail fournisseur, indicateurs | Claude Code |
+| **Sprint 4** | Actions métier & Intégration S/4 | Blocage, déblocage, clôture, sync API | Claude Code |

@@ -263,15 +263,6 @@ The objective of this sprint is to work on the object page, integrating many add
 
 Finally, sprint 4 is the last big step of adding functionality. Its objective is to add business rules to manage blockages, closures, action summaries, etc. It is in this sprint that we will define high value-added business rules.
 
-// TODO Finir cette partie
+Also, you will be able to make adjustments on the rendering of the application.
 
-Expliquer le folder / srtructure
-
-TODO: faire comme le hands-on tuto de SAP avec des étapes et des fichiers différents pour chaque étape
-
-Mettre un exemple de visuel d'application de fin
-
--> Description courte
--> le fil rouge qui présente toutes les autres documentations aussi (exemple : prompt guide)
-
-Surtout expliquer l'organisation du dossier (codebase par sprint, les documents prompts dans assets, etc)
+> [Let's start !](/exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/)  
