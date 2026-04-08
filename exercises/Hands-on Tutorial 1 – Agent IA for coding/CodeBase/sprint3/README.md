@@ -86,4 +86,6 @@ Following this audit, we have iterated on each Gap for those added to the applic
 
 ![sprint3_preview2_1](images/sprint3_preview2_1.png)
 
-![sprint3_preview2_2](images/sprint3_preview2_2.png) 
+![sprint3_preview2_2](images/sprint3_preview2_2.png)
+
+> Go to the next step: Sprint 4 - [Here](../sprint4/).

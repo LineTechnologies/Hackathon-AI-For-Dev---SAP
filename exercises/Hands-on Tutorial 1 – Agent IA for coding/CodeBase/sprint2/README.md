@@ -122,4 +122,4 @@ If it doesn't work and the app crashes because of the changes, don't hesitate to
 Finally, after some iteration (3 or 4), the header is displayed correctly and the values are accurate.
 ![Final Preview - Sprint 2](images/prompts/sprint2_final_result.png)
 
-> Go to the next step: Sprint 2
+> Go to the next step: Sprint 3 - [Here](../sprint3/)

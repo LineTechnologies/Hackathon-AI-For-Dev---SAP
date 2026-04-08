@@ -1,19 +1,15 @@
 # Hands-on Tutorial 3 - Joule Studio & CAP App
 
-## Objectives
-- Switch from mock data to real S/4HANA data using BTP destionation 
-- Understand how to merge a Joule Agents and Skills with CAP/Fiori application
-- Explore and reseach about posibilities and use case on merging this 2 activities
-
 ## Introduction
 
 During the Hackathon, you were able to create a CAP Fiori application, agents, skills, explore Joule Studio, the AI agents.
 
 Through this third hands-on tutorial, you will adjust and refine everything while trying to integrate the two works together.
 
-Pendant le Hackthon il sera compliqué de réaliser cette partie du au manque de temps.
-Partie exploratoire, exploratrise et non trivial, mais très pertienente
-Imaginer et "drafter" des use cases et scénarios où les agents 
+## Objectives
+- Switch from mock data to real S/4HANA data using BTP destionation 
+- Understand how to merge a Joule Agents and Skills with CAP/Fiori application
+- Explore and reseach about posibilities and use case on merging this 2 activities
 
 ## Steps
 

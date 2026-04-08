@@ -1,0 +1,77 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@sap/cds": "^9",
+    "express": "^4",
+    "@sap-cloud-sdk/connectivity": "^4",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-vendormanagementapp": "cds watch --open vendormanagementapp/index.html?sap-ui-xx-viewCache=false --livereload false --profile sandbox",
+    "watch-vendormanagementapp-prod": "cds watch --open vendormanagementapp/index.html?sap-ui-xx-viewCache=false --livereload false --profile hybrid",
+    "sandbox": "cds watch --profile sandbox",
+    "production": "cds watch --profile production"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/vendormanagementapp"
+  ],
+  "cds": {
+    "requires": {
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
+      },
+      "CE_PURCHASEORDER_0001": {
+        "kind": "odata",
+        "model": "srv/external/CE_PURCHASEORDER_0001"
+      },
+      "API_SUPPLIERINVOICE_PROCESS_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_SUPPLIERINVOICE_PROCESS_SRV"
+      },
+      "[hybrid]": {
+        "API_BUSINESS_PARTNER": {
+          "credentials": { "destination": "s4_sandbox_BusinessPartner" }
+        },
+        "CE_PURCHASEORDER_0001": {
+          "credentials": { "destination": "s4_sandbox_PurchaseOrder" }
+        },
+        "API_SUPPLIERINVOICE_PROCESS_SRV": {
+          "credentials": { "destination": "s4_sandbox_SupplierInvoices" }
+        }
+      },
+      "[sandbox]": {
+        "API_BUSINESS_PARTNER": {
+          "credentials": {
+            "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+            "headers": { "APIKey": "${S4_API_KEY}" }
+          }
+        },
+        "CE_PURCHASEORDER_0001": {
+          "credentials": {
+            "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata4/sap/api_purchaseorder_2/srvd_a2x/sap/purchaseorder/0001",
+            "headers": { "APIKey": "${S4_API_KEY}" }
+          }
+        },
+        "API_SUPPLIERINVOICE_PROCESS_SRV": {
+          "credentials": {
+            "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SUPPLIERINVOICE_PROCESS_SRV",
+            "headers": { "APIKey": "${S4_API_KEY}" }
+          }
+        }
+      }
+    }
+  }
+}

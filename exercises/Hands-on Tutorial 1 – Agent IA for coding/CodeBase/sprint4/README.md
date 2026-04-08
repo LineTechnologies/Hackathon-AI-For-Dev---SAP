@@ -2,17 +2,23 @@
 
 This document traces the entire realization of sprint 2 and contains all the prompts used, results, and tips for this section. You can use this guide to create your own prompts based on your functional specifications.
 
+> [!NOTE]
+> For sprint 4, we are also basing ourselves on the specification document to introduce the new features and behaviors of the application. But, we will also make adjustments to refine our rendering, the rules, the business actions, etc. You will be able to understand how we can use Claude Code to perform very specific tasks and iterate on a particular "à la volé" rendering. In a project context, we could think of a scenario where a functional profile checks a first rendering of the application and asks you for adjustments.  
+
 ---
 
-**Prompt 1 : Plan & Edit the project**
+**Prompt 1 & 2 : Plan & Edit the project**
+
+On the first two sprints, we perform the same operations as for the previous sprints in order to add a first wave of functionality.
 
 ![sprint4 preview1 iteration 2](images/sprint4_preview1_it2.png)
 
+
+
 **Prompt 3 : Adjustments and Resolutions**
+One can quickly notice that certain elements have not been completely taken into account. The charts do not work correctly. We will adjust these elements.
 
 ![sprint4 preview_2](images/sprint4_preview_2.png)
-
-**Prompt 4 : Adjustments and Resolutions**
 
 **Prompt 4 : Adjustments KIPs**
 We can note that all the features around the KPIs are functional. But, we will sort things out a bit. In this part, we will iterate to adjust the UX and UI of these KPIs to have a more pleasant and relevant custom element.
@@ -77,9 +83,10 @@ Now you can manually enhance the app and adjust the latest components, UX and UI
 
 You have the field of possibilities!
 
+For example, we tested adding the multi-language system to have an application in French and English, allowing a unified interface in the same language.
+
+![Final version](images/preview_final_version.png)
+
 As part of this hands-on tutorial, we have finished the exercise, you can switch to hands-on tutorial 2 on Joule Studio or on the sharing part.
 
 > Go to Hands-on Tutorial 2
-
-
-
