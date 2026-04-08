@@ -213,7 +213,7 @@ Construire un **Agent Joule** qui, à partir d’une simple question de l’util
      - demande toujours la **validation finale** avant d’exécuter l’action.
 
 Exemple de rendu final : ![alt text](images/RenduFinal.png)
-
+Exemple de blocage fournisseur : ![alt text](images/BlocageExp.png)
 ---
 
 ## Conseils pour réussir le hackathon
