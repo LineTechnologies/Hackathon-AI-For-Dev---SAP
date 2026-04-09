@@ -220,6 +220,9 @@ Build a **Joule Agent** which, from a simple user question, will:
      - then offers to execute the blocking / unblocking via the appropriate Skill,  
      - always asks for **final validation** before executing the action.
 
+Example of end result : ![alt text](images/RenduFinal.png)
+Example of Supplier block : ![alt text](images/BlocageExp.png)
+
 ---
 
 ## Tips to succeed in the hackathon
