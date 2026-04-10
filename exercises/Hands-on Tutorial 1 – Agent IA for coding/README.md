@@ -68,11 +68,6 @@ The Accelerator project is a tool integrated into BAS that allows you to generat
 
 We now have an initialized, functional app that can be previewed. We will now use Claude Code to iterate on the project and code by adding, modifying, and reviewing it.
 
-**Dire qu'il faut skip cette étape pendant le hackathon car déjà mis en place !!**
-Sauf partie 3.3 sur l'optimisation (juste MCP, l'authentification + install)
-
-=> faire init, optimisation CLAUDE.md (Rules, etc)
-
 ### 3.1 Claude Code Installation
 
 First, we’ll install Claude Code in our DevSpace. For instructions, please refer to the following document [Claude Code Setup Guide](exercises/..) or the official Anthropic documentation.
