@@ -95,7 +95,7 @@ At LINE, we support our clients in their digital transformation to meet their st
 **Careers:** [Discover our job offers](https://www.welcometothejungle.com/en/companies/line-technologies)
 
 **About SAP**
-As a global leader in enterprise applications, SAP supports organizations of all sizes in their digital transformation. The exercises of this repository are based on the **SAP Business Technology Platform (SAP BTP)*, the unified platform for integration, value creation from data and extensibility. 
+As a global leader in enterprise applications, SAP supports organizations of all sizes in their digital transformation. The exercises of this repository are based on the **SAP Business Technology Platform (SAP BTP)**, the unified platform for integration, value creation from data and extensibility. 
 
 This hackathon particularly highlights SAP’s technological strategy around generative Artificial Intelligence, notably through the use of **Joule** (the enterprise AI co-pilot) and cloud-native development environments (SAP CAP, Fiori).
 
