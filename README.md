@@ -7,12 +7,10 @@
 
 # Hackathon AI For Dev - SAP x Line
 
-<table>
-  <tr>
-    <td align="center"><img src="assets/images/Line_Logo_Version claire_V1.png" width="200" alt="Line"></td>
-    <td align="center"><img src="assets/images/SAP_2011_logo.svg.png" width="200" alt="SAP"></td>
-  </tr>
-</table>
+<div align="center">
+  <img src="assets/images/Line_Logo_Version claire_V1.png" height="70" alt="Logo Line" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/SAP_2011_logo.svg.png" height="70" alt="Logo SAP" />
+</div>
 
 ## Workshop Schedule (Format)
 This workshop is designed to be highly collaborative. To tackle the challenge of this Hackathon, you will be divided into two teams working in parallel, before merging your work:
@@ -87,3 +85,10 @@ However, if you wish to recreate this use case at home or at your company, here 
 *Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
+
+<table>
+  <tr>
+    <td align="center"><img src="assets/images/Line_Logo_Version claire_V1.png" width="200" alt="Line"></td>
+    <td align="center"><img src="assets/images/SAP_2011_logo.svg.png" width="200" alt="SAP"></td>
+  </tr>
+</table>
