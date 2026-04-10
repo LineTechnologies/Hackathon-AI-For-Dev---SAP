@@ -5,12 +5,12 @@
 > *   **For Educational Use Only:** This environment is designed exclusively for learning, experimentation, and this serious game. It is not intended for production use.
 > *   **Potential Instability:** When using “preview” versions of tools and connecting between multiple systems (MCP, Joule, CAP), you may experience occasional instability. The exercises are designed to work with the platform as it currently stands. If you get stuck, don't hesitate to ask an instructor for help!
 
+# Hackathon AI For Dev - SAP x Line
+
 <div align="left">
   <img src="assets/images/Line_Logo_Version claire_V1.png" height="70" alt="Logo Line" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/SAP_2011_logo.svg.png" height="70" alt="Logo SAP" />
 </div>
-
-# Hackathon AI For Dev - SAP x Line
 
 ## Workshop Schedule (Format)
 This workshop is designed to be highly collaborative. To tackle the challenge of this Hackathon, you will be divided into two teams working in parallel, before merging your work:
@@ -85,10 +85,3 @@ However, if you wish to recreate this use case at home or at your company, here 
 *Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
-
-<table>
-  <tr>
-    <td align="center"><img src="assets/images/Line_Logo_Version claire_V1.png" width="200" alt="Line"></td>
-    <td align="center"><img src="assets/images/SAP_2011_logo.svg.png" width="200" alt="SAP"></td>
-  </tr>
-</table>

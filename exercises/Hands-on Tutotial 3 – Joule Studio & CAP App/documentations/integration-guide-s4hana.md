@@ -1183,3 +1183,14 @@ If the credentials do not show the API key, check:
 ---
 
 *Guide rédigé dans le cadre du projet Long Tail Vendor Management — LVMH TECH Hackathon AI FOR DEV – SAP.*
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*
+
+<div align="left">
+  <img src="../../../assets/images/Line_Logo_Version claire_V1.png" height="70" alt="Logo Line" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../../assets/images/SAP_2011_logo.svg.png" height="70" alt="Logo SAP" />
+</div>
