@@ -5,7 +5,7 @@ Welcome to this Hands-on Tutorial! In this exercise, you will learn how to lever
 
 You can follow this step-by-step hands-on to fully realize the guided use case. We recommend that you follow the first steps, if necessary, to set up Claude Code, optimize it and discover tips on its use. Then, to write the specifications, use the Project Accelerator and perform the iterations by yourself to take control of the tools and assimilate this new development method.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > This practical tutorial is based on the use of Claude Code to illustrate iterative processes. If you use another programming agent (like Cline), the approach remains the same. Only the installation step differs due to the specific interfaces of each tool, but the fundamental concepts—MCP servers, project rules, and planning/execution modes — remain the same.
 
 ## Repository Structure & The "Red Thread"
