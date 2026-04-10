@@ -80,6 +80,25 @@ However, if you wish to recreate this use case at home or at your company, here 
     - A instance of Claude Sonnet 4.6 Anthropic model in SAP AI Core
     - At least one Claude Pro account or a valid, provisioned Anthropic API key 
 
+## About Organizers
+
+This hackathon and these exercises were designed by **Line* and **SAP*.
+
+At LINE, we support our clients in their digital transformation to meet their strategic challenges. Our consulting firm combines business and technological expertise to make your ERP project a real catalyst for transformation. Beyond technology, we help you optimize your processes, reinvent your decision-making and engage your employees. Did you enjoy the approach of this hackathon and the exercises around GenIA? Come discuss your ambitions with our experts!
+
+**Website:** [Visit Line’s site](https://www.line-technologies.com/)  
+**LinkedIn:** [Follow our news](https://www.linkedin.com/company/line-technologies/)  
+**Careers:** [Discover our job offers](https://www.welcometothejungle.com/en/companies/line-technologies)
+
+**About SAP**
+As a global leader in enterprise applications, SAP supports organizations of all sizes in their digital transformation. The exercises of this repository are based on the **SAP Business Technology Platform (SAP BTP)*, the unified platform for integration, value creation from data and extensibility. 
+
+This hackathon particularly highlights SAP’s technological strategy around generative Artificial Intelligence, notably through the use of **Joule** (the enterprise AI co-pilot) and cloud-native development environments (SAP CAP, Fiori).
+
+* **SAP BTP:** [Discover the platform](https://www.sap.com/france/products/technology-platform.html)
+* **SAP AI & Joule :** [Explore Enterprise AI by SAP](https://www.sap.com/france/products/artificial-intelligence.html)
+* **Official website:** [SAP.com](https://www.sap.com/france/index.html)
+
 ---
  
 *Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*

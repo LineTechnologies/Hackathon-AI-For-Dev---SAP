@@ -231,6 +231,10 @@ Exemple de blocage fournisseur : ![alt text](images/BlocageExp.png)
 *Author: Line*
 
 <div align="left">
-  <img src="../../assets/images/Line_Logo_Version claire_V1.png" height="70" alt="Logo Line" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../../assets/images/SAP_2011_logo.svg.png" height="70" alt="Logo SAP" />
+  <a href="https://www.line-technologies.com/">
+    <img src="../../assets/images/Line_Logo_Version claire_V1.png" height="70" alt="Logo Line" />
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.sap.com">
+  <img src="../../assets/images/SAP_2011_logo.svg.png" height="70" alt="Logo SAP" />
+  </a>
 </div>
