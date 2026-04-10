@@ -7,7 +7,7 @@
 
 # Hackathon AI For Dev - SAP x Line
 
-<div align="center">
+<div align="left">
   <img src="assets/images/Line_Logo_Version claire_V1.png" height="70" alt="Logo Line" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/images/SAP_2011_logo.svg.png" height="70" alt="Logo SAP" />
 </div>
