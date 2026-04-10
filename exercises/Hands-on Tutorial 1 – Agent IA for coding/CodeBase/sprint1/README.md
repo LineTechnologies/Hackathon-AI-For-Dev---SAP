@@ -87,3 +87,9 @@ Please update the necessary `.cds` (annotations/schema), `.js` (service handlers
 All right, we can clearly see that the final touches have been made. Sprint 1 is now complete.
 
 > Go to the next step: Sprint 2 - [Here](../sprint2/).
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

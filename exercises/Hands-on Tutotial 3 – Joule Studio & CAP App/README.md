@@ -202,3 +202,9 @@ Throughout this hackathon, you explored two of the most concrete ways GenAI is r
 This third tutorial was intentionally different and was not meant to be completed — it was meant to be read, discussed, and imagined. It opens a third dimension: what happens when you connect these two worlds? The integration of Joule into a CAP application, the idea of an AI assistant grounded in live S/4HANA data, a CAP service becoming natively consumable by any AI agent through MCP annotations — these are not distant concepts. They are already technically within reach, and the use cases they unlock are significant: intelligent supplier diagnostics, conversational access to enterprise data, AI-assisted decision-making embedded directly into your business processes.
 
 The goal here was to give you a map of the possibilities, so that when the right opportunity arises — a client need, an internal initiative, a future hackathon — you already know what directions exist and where to start.
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

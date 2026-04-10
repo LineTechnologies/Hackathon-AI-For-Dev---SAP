@@ -89,3 +89,9 @@ Following this audit, we have iterated on each Gap for those added to the applic
 ![sprint3_preview2_2](images/sprint3_preview2_2.png)
 
 > Go to the next step: Sprint 4 - [Here](../sprint4/).
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

@@ -1,4 +1,4 @@
-using { longTailVendorManagementSrv } from '../../srv/service.cds';
+using { longTailVendorManagementSrv } from '../../srv/service';
 
 annotate longTailVendorManagementSrv.Vendors with @UI.DataPoint #vendorName: {
   Value: vendorName,

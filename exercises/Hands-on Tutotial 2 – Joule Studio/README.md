@@ -223,3 +223,9 @@ Exemple de blocage fournisseur : ![alt text](images/BlocageExp.png)
 - **Testez en langage naturel** dès que possible pour valider que le comportement est compréhensible du point de vue métier.
 - **Repérez les “pièges”** dans les actions SAP Build : toutes ne servent pas au scénario. Justifiez vos choix.
 - **Gardez la main humaine** : aucune action sensible (blocage) ne doit être exécutée sans confirmation explicite dans la conversation. 
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

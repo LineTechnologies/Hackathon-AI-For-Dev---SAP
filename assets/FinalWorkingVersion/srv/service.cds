@@ -1,9 +1,9 @@
-using { longTailVendorManagement } from '../db/schema.cds';
+using { longTailVendorManagement } from '../db/schema';
 
 // 1. Déclaration des modèles externes générés par l'import des EDMX
-using { API_BUSINESS_PARTNER as bupaAPI } from './external/API_BUSINESS_PARTNER';
-using { CE_PURCHASEORDER_0001 as poAPI } from './external/CE_PURCHASEORDER_0001';
-using { API_SUPPLIERINVOICE_PROCESS_SRV as invAPI } from './external/API_SUPPLIERINVOICE_PROCESS_SRV';
+using { API_BUSINESS_PARTNER as bupaAPI } from './external/API_BUSINESS_PARTNER.csn';
+using { CE_PURCHASEORDER_0001 as poAPI } from './external/CE_PURCHASEORDER_0001.csn';
+using { API_SUPPLIERINVOICE_PROCESS_SRV as invAPI } from './external/API_SUPPLIERINVOICE_PROCESS_SRV.csn';
 
 service longTailVendorManagementSrv {
 

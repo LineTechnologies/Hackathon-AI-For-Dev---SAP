@@ -232,3 +232,9 @@ Example of Supplier block : ![alt text](images/BlocageExp.png)
 - **Test in natural language** as early as possible to validate that the behavior is understandable from a business perspective.
 - **Spot the “traps”** in SAP Build actions: not all of them are relevant to the scenario. Justify your choices.
 - **Keep the human in control**: no sensitive action (blocking) should be executed without explicit confirmation in the conversation.
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

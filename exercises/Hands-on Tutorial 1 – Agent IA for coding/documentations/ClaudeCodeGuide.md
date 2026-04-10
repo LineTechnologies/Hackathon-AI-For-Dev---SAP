@@ -305,3 +305,9 @@ These guides focus on the syntax and methodology of writing highly effective ins
 * [How Anthropic Teams Use Claude Code (Whitepaper PDF)](https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf): A highly relevant case study detailing real-world coding scenarios: fast prototyping with "auto-accept" mode, complex infrastructure debugging, test-driven development workflows, and helping newcomers explore massive legacy codebases.
 
 * [Building a C Compiler with Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler): A fascinating use case showing how developers can spawn multiple autonomous Claude Code agents (subagents) to work on different bugs in parallel.
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

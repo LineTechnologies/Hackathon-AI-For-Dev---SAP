@@ -788,6 +788,6 @@ You are now equipped to be a significantly more effective AI Manager. Go build s
  
 ---
  
-*Guide version 1.0 — Adapted for LVMH Hackathon Workshops | 2026*
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*

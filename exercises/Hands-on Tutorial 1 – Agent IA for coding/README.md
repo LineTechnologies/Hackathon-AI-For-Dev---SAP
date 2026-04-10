@@ -265,4 +265,12 @@ Finally, sprint 4 is the last big step of adding functionality. Its objective is
 
 Also, you will be able to make adjustments on the rendering of the application.
 
+Have a good workshop and have fun with Joule Studio!
+
 > [Let's start !](/exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/)  
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

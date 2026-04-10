@@ -90,3 +90,9 @@ For example, we tested adding the multi-language system to have an application i
 As part of this hands-on tutorial, we have finished the exercise, you can switch to hands-on tutorial 2 on Joule Studio or on the sharing part.
 
 > Go to Hands-on Tutorial 2
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

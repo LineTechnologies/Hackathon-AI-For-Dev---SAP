@@ -208,3 +208,9 @@ En mode développement, CAP charge automatiquement les fichiers CSV depuis `test
 | **Sprint 2** | Insights & KPI | Score de risque, statut, en-tête KPI | Claude Code |
 | **Sprint 3** | Navigation & Object Page | Fiche détail fournisseur, indicateurs | Claude Code |
 | **Sprint 4** | Actions métier & Intégration S/4 | Blocage, déblocage, clôture, sync API | Claude Code |
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*

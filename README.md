@@ -7,6 +7,13 @@
 
 # Hackathon AI For Dev - SAP x Line
 
+<table>
+  <tr>
+    <td align="center"><img src="assets/images/Line_Logo_Version claire_V1.png" width="200" alt="Line"></td>
+    <td align="center"><img src="assets/images/SAP_2011_logo.svg.png" width="200" alt="SAP"></td>
+  </tr>
+</table>
+
 ## Workshop Schedule (Format)
 This workshop is designed to be highly collaborative. To tackle the challenge of this Hackathon, you will be divided into two teams working in parallel, before merging your work:
 
@@ -41,8 +48,9 @@ Final Presentation: At the end of the workshop, the unified group will present i
     - [Sprint 4 - Business Action](exercises/Hands-on%20Tutorial%201%20–%20Agent%20IA%20for%20coding/CodeBase/sprint4)
 
 - [Hands-on Tutotial 2 – Joule Studio ](exercises/Hands-on%20Tutorial%202%20–%Joule%20Studio/)
-    - [Hands-on Tutorial 2](exercises/ex0/)
-    - [Hands-on Tutorial 2](exercises/ex0/)
+    - [Sprint 1: Blocking / unlocking skill](exercises/Hands-on%20Tutorial%202%20–%Joule%20Studio/README.md#sprint-1--skill-de-blocage--déblocage-fournisseur)
+    - [Sprint 2: Supplier evaluation skill](exercises/Hands-on%20Tutorial%202%20–%Joule%20Studio/README.md#sprint-2--skill-dévaluation-fournisseur)
+    - [Sprint 3: Decisional Joule Agent](exercises/Hands-on%20Tutorial%202%20–%Joule%20Studio/README.mdsprint-3--agent-joule-décisionnel)
 
 - [Hands-on Tutotial 3 – Joule Studio & CAP App](exercises/Hands-on%20Tutorial%203%20–%Joule%20Studio%20&%20CAP%20App/)
     - [Connecting CAP Application to S/4HANA backend system](exercises/Hands-on%20Tutotial%203%20–%20Joule%20Studio%20&%20CAP%20App/#1-switch-from-mock-data-to-real-s4hana-data-using-btp-destination)
@@ -69,6 +77,13 @@ However, if you wish to recreate this use case at home or at your company, here 
     - BTP Destinations correctly configured and accessible in SAP BAS.
 3.  **Joule Studio in SAP Build**:
     - The Agent Builder must be enabled and accessible on your tenant.
-3.  **Third-Party AI Tools (Claude Code)**:
-    - A local or cloud installation of Claude Code.
+3.  **Third-Party AI Tools (Claude Code / Cline)**:
+    - A local or cloud installation of Claude Code / Cline.
+    - A instance of Claude Sonnet 4.6 Anthropic model in SAP AI Core
     - At least one Claude Pro account or a valid, provisioned Anthropic API key 
+
+---
+ 
+*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+
+*Author: Line*
