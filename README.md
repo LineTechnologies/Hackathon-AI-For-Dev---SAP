@@ -86,7 +86,7 @@ However, if you wish to recreate this use case at home or at your company, here 
 
 ## About Organizers
 
-This hackathon and these exercises were designed by **Line* and **SAP*.
+This hackathon and these exercises were designed by **Line** and **SAP**.
 
 At LINE, we support our clients in their digital transformation to meet their strategic challenges. Our consulting firm combines business and technological expertise to make your ERP project a real catalyst for transformation. Beyond technology, we help you optimize your processes, reinvent your decision-making and engage your employees. Did you enjoy the approach of this hackathon and the exercises around GenIA? Come discuss your ambitions with our experts!
 
