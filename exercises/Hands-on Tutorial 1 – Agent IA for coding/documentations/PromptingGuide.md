@@ -178,7 +178,8 @@ This mindset unlocks everything. Every section of this guide is a technique to b
  
 ### The Critical Behavioral Shift in Claude 4.x
  
-> **Important:** If you have used earlier Claude versions, be aware that Claude 4.x models (Sonnet 4.6, Opus 4.6) no longer try to "infer your intent" and expand on vague requests. They execute your instructions literally. A prompt that worked in 2024 may produce a much narrower output in 2026. **Be more explicit, not less.**
+> [!IMPORTANT]
+> If you have used earlier Claude versions, be aware that Claude 4.x models (Sonnet 4.6, Opus 4.6) no longer try to "infer your intent" and expand on vague requests. They execute your instructions literally. A prompt that worked in 2024 may produce a much narrower output in 2026. **Be more explicit, not less.**
  
 ---
  
@@ -350,7 +351,8 @@ file controls the column layout of the List Report table.
 Run `cds watch` to start local server. Test OData at http://localhost:4004
 ```
  
-> 💡 **Pro Tip:** Keep your `CLAUDE.md` concise. If it becomes too long, Claude will start ignoring sections buried at the bottom. Prune anything Claude already does correctly without being told.
+> [!TIP]
+> Keep your `CLAUDE.md` concise. If it becomes too long, Claude will start ignoring sections buried at the bottom. Prune anything Claude already does correctly without being told.
  
 ### 3.3 — Plan Mode: Separate Thinking from Doing
  
@@ -475,8 +477,9 @@ Now verify the implementation:
 3. Confirm the Fiori annotation for StockRisk references the correct
    entity set name
 ```
- 
-> ✅ **The golden rule of verification:** If you cannot verify it, do not ship it. Claude can produce plausible-looking code that silently fails at runtime. Always run your test command.
+
+> [!NOTE]
+> **The golden rule of verification:** If you cannot verify it, do not ship it. Claude can produce plausible-looking code that silently fails at runtime. Always run your test command.
  
 ---
  
