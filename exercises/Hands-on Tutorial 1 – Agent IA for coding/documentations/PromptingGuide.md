@@ -321,7 +321,7 @@ file controls the column layout of the List Report table.
 **What to put in CLAUDE.md:**
  
 ```markdown
-# Project: PO Control Tower — LVMH Tech Hackathon
+# Project: PO Control Tower — Hackathon
  
 ## Tech Stack
 - SAP CAP (Node.js runtime)
@@ -791,7 +791,7 @@ You are now equipped to be a significantly more effective AI Manager. Go build s
  
 ---
  
-*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+*Guide version 1.0 — Adapted for Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
 

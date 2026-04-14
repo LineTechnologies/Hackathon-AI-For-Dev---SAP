@@ -235,7 +235,7 @@ Example of Supplier block : ![alt text](images/BlocageExp.png)
 
 ---
  
-*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+*Guide version 1.0 — Adapted for Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
 

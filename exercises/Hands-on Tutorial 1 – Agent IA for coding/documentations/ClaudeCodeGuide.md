@@ -308,7 +308,7 @@ These guides focus on the syntax and methodology of writing highly effective ins
 
 ---
  
-*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+*Guide version 1.0 — Adapted for Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
 

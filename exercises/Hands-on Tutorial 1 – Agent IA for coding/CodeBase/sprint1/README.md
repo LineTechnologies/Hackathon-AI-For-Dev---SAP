@@ -90,7 +90,7 @@ All right, we can clearly see that the final touches have been made. Sprint 1 is
 
 ---
  
-*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+*Guide version 1.0 — Adapted for Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
 
