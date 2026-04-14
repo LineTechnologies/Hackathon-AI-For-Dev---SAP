@@ -2,7 +2,7 @@
 
 Application SAP Fiori Elements pour identifier et gérer les fournisseurs inactifs dans S/4HANA.
 
-Développée dans le cadre du **LVMH TECH Hackathon AI FOR DEV – SAP** en 4 sprints itératifs : Sprint 1 via SAP Project Accelerator, Sprints 2–4 via Claude Code.
+Développée dans le cadre du **Hackathon AI FOR DEV – SAP** en 4 sprints itératifs : Sprint 1 via SAP Project Accelerator, Sprints 2–4 via Claude Code.
 
 ---
 
@@ -211,6 +211,6 @@ En mode développement, CAP charge automatiquement les fichiers CSV depuis `test
 
 ---
  
-*Guide version 1.0 — Adapted for LVMH Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
+*Guide version 1.0 — Adapted for Hackathon GenAI For Dev Workshops - SAP x Line | 2026*
 
 *Author: Line*
